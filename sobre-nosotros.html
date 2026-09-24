@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre nosotros | Bella Uñas Studio</title>
+  <meta name="description" content="Conoce la historia, el equipo y los valores de Bella Uñas Studio. Más de 10 años creando arte en cada uña.">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        fontFamily: { sans: ['Inter','system-ui','sans-serif'], display: ['"Playfair Display"','serif'] }
+      }}
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+</head>
+<body class="bg-white text-gray-800">
+
+  <!-- NAVBAR -->
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 py-4">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2 group">
+        <img src="assets/logo.svg" alt="Bella Uñas" class="w-10 h-10 group-hover:scale-110 transition-transform">
+        <span class="font-display text-xl font-bold text-gray-800 hidden sm:block">Bella Uñas</span>
+      </a>
+      <ul class="hidden lg:flex items-center gap-7 text-sm font-medium text-gray-700">
+        <li><a href="index.html" data-nav="index.html">Inicio</a></li>
+        <li><a href="sobre-nosotros.html" data-nav="sobre-nosotros.html">Sobre nosotros</a></li>
+        <li><a href="servicios.html" data-nav="servicios.html">Servicios</a></li>
+        <li><a href="galeria.html" data-nav="galeria.html">Galería</a></li>
+        <li><a href="precios.html" data-nav="precios.html">Precios</a></li>
+        <li><a href="horario-clases.html" data-nav="horario-clases.html">Clases</a></li>
+        <li><a href="contacto.html" data-nav="contacto.html">Contacto</a></li>
+      </ul>
+      <a href="contacto.html" class="btn-primary hidden lg:inline-flex"><i class="fa-regular fa-calendar-check"></i> Reservar cita</a>
+      <button id="burger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+    </nav>
+  </header>
+  <div id="mobile-menu-backdrop"></div>
+  <div id="mobile-menu" aria-hidden="true">
+    <a href="index.html">Inicio</a>
+    <a href="sobre-nosotros.html">Sobre nosotros</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="galeria.html">Galería</a>
+    <a href="precios.html">Precios</a>
+    <a href="horario-clases.html">Horario de clases</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="privacidad.html">Privacidad</a>
+    <a href="terminos.html">Términos</a>
+    <a href="contacto.html" class="btn-primary mt-4 justify-center"><i class="fa-regular fa-calendar-check"></i> Reservar cita</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero-gradient pt-32 pb-16 lg:pt-40 lg:pb-20 relative">
+    <div class="blob bg-rose-300 w-96 h-96 -top-20 -right-20"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="text-center max-w-3xl mx-auto" data-anim="fade-up">
+        <span class="text-rose-500 font-semibold text-sm uppercase tracking-wider">Sobre nosotros</span>
+        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold mt-3 mb-5 text-gray-900">
+          Una historia de <span class="bg-gradient-to-r from-rose-500 to-pink-500 bg-clip-text text-transparent">pasión</span> por las uñas
+        </h1>
+        <p class="text-lg text-gray-600">Más de una década cuidando manos y creando arte en cada uña.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HISTORIA -->
+  <section class="py-20 lg:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
+      <div data-anim="fade-right">
+        <span class="text-rose-500 font-semibold text-sm uppercase tracking-wider">Nuestra historia</span>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold mt-3 mb-5 text-gray-900">Comenzamos con un sueño en 2015</h2>
+        <p class="text-gray-600 mb-4">
+          Bella Uñas Studio nació del amor de Lucía por el nail art. Empezó como un pequeño rincón en un local compartido, con una sola silla, una lámpara y muchísima ilusión.
+        </p>
+        <p class="text-gray-600 mb-4">
+          Poco a poco, su talento y dedicación fueron conquistando a clientas que recomendaban su trabajo a familiares y amigas. Hoy, casi diez años después, somos un equipo de 15 profesionales que comparten la misma pasión: hacer que cada clienta se sienta única.
+        </p>
+        <p class="text-gray-600 mb-6">
+          Nos especializamos en técnicas avanzadas — manicura rusa, extensiones acrílicas, nail art 3D — pero nunca olvidamos lo más importante: el trato cercano, la higiene impecable y los productos de la mejor calidad.
+        </p>
+        <div class="flex gap-4 flex-wrap">
+          <a href="contacto.html" class="btn-primary"><i class="fa-regular fa-calendar-check"></i> Reserva tu cita</a>
+          <a href="galeria.html" class="btn-secondary">Ver galería <i class="fa-solid fa-arrow-right text-sm"></i></a>
+        </div>
+      </div>
+      <div class="relative" data-anim="fade-left">
+        <div class="grid grid-cols-2 gap-4">
+          <div class="space-y-4">
+            <div class="rounded-2xl overflow-hidden shadow-lg aspect-[3/4]">
+              <img src="https://images.unsplash.com/photo-1571290274554-6a2eaa771e5f?w=500&auto=format&fit=crop&q=80" alt="" class="w-full h-full object-cover">
+            </div>
+            <div class="rounded-2xl overflow-hidden shadow-lg aspect-square">
+              <img src="https://images.unsplash.com/photo-1601612628452-9e99ced43524?w=500&auto=format&fit=crop&q=80" alt="" class="w-full h-full object-cover">
+            </div>
+          </div>
+          <div class="space-y-4 mt-8">
+            <div class="rounded-2xl overflow-hidden shadow-lg aspect-square">
+              <img src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?w=500&auto=format&fit=crop&q=80" alt="" class="w-full h-full object-cover">
+            </div>
+            <div class="rounded-2xl overflow-hidden shadow-lg aspect-[3/4]">
+              <img src="https://images.unsplash.com/photo-1604904612715-47bf9d9bc670?w=500&auto=format&fit=crop&q=80" alt="" class="w-full h-full object-cover">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="py-16 bg-gradient-to-br from-rose-500 to-pink-500 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+      <div data-anim="zoom-in" data-delay="100">
+        <p class="text-5xl font-display font-bold mb-2"><span data-counter="10" data-suffix="+">0</span></p>
+        <p class="text-rose-100 text-sm uppercase tracking-wider">Años</p>
+      </div>
+      <div data-anim="zoom-in" data-delay="200">
+        <p class="text-5xl font-display font-bold mb-2"><span data-counter="2500" data-suffix="+">0</span></p>
+        <p class="text-rose-100 text-sm uppercase tracking-wider">Clientas felices</p>
+      </div>
+      <div data-anim="zoom-in" data-delay="300">
+        <p class="text-5xl font-display font-bold mb-2"><span data-counter="15">0</span></p>
+        <p class="text-rose-100 text-sm uppercase tracking-wider">Profesionales</p>
+      </div>
+      <div data-anim="zoom-in" data-delay="400">
+        <p class="text-5xl font-display font-bold mb-2"><span data-counter="50" data-suffix="+">0</span></p>
+        <p class="text-rose-100 text-sm uppercase tracking-wider">Diseños</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- EQUIPO -->
+  <section class="py-20 lg:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-16" data-anim="fade-up">
+        <span class="text-rose-500 font-semibold text-sm uppercase tracking-wider">Nuestro equipo</span>
+        <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold mt-3 mb-4 text-gray-900">Manos expertas, corazones artistas</h2>
+        <p class="text-gray-600">Profesionales formadas, apasionadas y dedicadas a que salgas siempre feliz.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <article class="card-hover bg-white rounded-3xl overflow-hidden border border-rose-100" data-anim="fade-up" data-delay="100">
+          <div class="aspect-square overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&auto=format&fit=crop&q=80" alt="Lucía Martín" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+          </div>
+          <div class="p-6">
+            <h3 class="font-display text-xl font-bold text-gray-800">Lucía Martín</h3>
+            <p class="text-rose-500 text-sm font-semibold mb-3">Fundadora & Nail Artist</p>
+            <p class="text-gray-600 text-sm mb-4">Apasionada del nail art desde hace 12 años. Especialista en diseños minimalistas y técnicas avanzadas.</p>
+            <span class="inline-flex items-center gap-1 text-xs bg-rose-50 text-rose-700 px-3 py-1 rounded-full"><i class="fa-solid fa-star text-amber-400"></i> Nail Art Minimalista</span>
+          </div>
+        </article>
+
+        <article class="card-hover bg-white rounded-3xl overflow-hidden border border-rose-100" data-anim="fade-up" data-delay="200">
+          <div class="aspect-square overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&auto=format&fit=crop&q=80" alt="Sofía Reyes" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+          </div>
+          <div class="p-6">
+            <h3 class="font-display text-xl font-bold text-gray-800">Sofía Reyes</h3>
+            <p class="text-rose-500 text-sm font-semibold mb-3">Manicurista Senior</p>
+            <p class="text-gray-600 text-sm mb-4">Experta en manicura rusa y extensiones. Formadora de nuevas generaciones de manicuristas.</p>
+            <span class="inline-flex items-center gap-1 text-xs bg-rose-50 text-rose-700 px-3 py-1 rounded-full"><i class="fa-solid fa-star text-amber-400"></i> Manicura Rusa</span>
+          </div>
+        </article>
+
+        <article class="card-hover bg-white rounded-3xl overflow-hidden border border-rose-100" data-anim="fade-up" data-delay="300">
+          <div class="aspect-square overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=500&auto=format&fit=crop&q=80" alt="Carla Núñez" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+          </div>
+          <div class="p-6">
+            <h3 class="font-display text-xl font-bold text-gray-800">Carla Núñez</h3>
+            <p class="text-rose-500 text-sm font-semibold mb-3">Especialista en Pedicura</p>
+            <p class="text-gray-600 text-sm mb-4">Convertirá tus pies en una obra de arte. Apasionada por los tratamientos spa relajantes.</p>
+            <span class="inline-flex items-center gap-1 text-xs bg-rose-50 text-rose-700 px-3 py-1 rounded-full"><i class="fa-solid fa-star text-amber-400"></i> Pedicura Spa</span>
+          </div>
+        </article>
+
+        <article class="card-hover bg-white rounded-3xl overflow-hidden border border-rose-100" data-anim="fade-up" data-delay="400">
+          <div class="aspect-square overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=500&auto=format&fit=crop&q=80" alt="Andrea Vidal" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+          </div>
+          <div class="p-6">
+            <h3 class="font-display text-xl font-bold text-gray-800">Andrea Vidal</h3>
+            <p class="text-rose-500 text-sm font-semibold mb-3">Diseñadora de Uñas</p>
+            <p class="text-gray-600 text-sm mb-4">Creativa y detallista. Le encanta crear diseños únicos que sorprendan a cada clienta.</p>
+            <span class="inline-flex items-center gap-1 text-xs bg-rose-50 text-rose-700 px-3 py-1 rounded-full"><i class="fa-solid fa-star text-amber-400"></i> Diseños 3D</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALORES -->
+  <section class="py-20 lg:py-28 bg-rose-50/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-16" data-anim="fade-up">
+        <span class="text-rose-500 font-semibold text-sm uppercase tracking-wider">Nuestros valores</span>
+        <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold mt-3 mb-4 text-gray-900">Lo que nos define</h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-3xl p-8 shadow-sm" data-anim="fade-up" data-delay="100">
+          <div class="w-14 h-14 rounded-2xl bg-rose-100 text-rose-600 flex items-center justify-center text-2xl mb-5">
+            <i class="fa-solid fa-heart"></i>
+          </div>
+          <h3 class="font-display text-xl font-bold mb-3">Pasión</h3>
+          <p class="text-gray-600">Cada uña es una obra de arte. Ponemos el corazón en cada detalle, desde el limado hasta el último brillo.</p>
+        </div>
+        <div class="bg-white rounded-3xl p-8 shadow-sm" data-anim="fade-up" data-delay="200">
+          <div class="w-14 h-14 rounded-2xl bg-rose-100 text-rose-600 flex items-center justify-center text-2xl mb-5">
+            <i class="fa-solid fa-handshake"></i>
+          </div>
+          <h3 class="font-display text-xl font-bold mb-3">Confianza</h3>
+          <p class="text-gray-600">Higiene estricta, productos certificados y total transparencia. Tu seguridad es lo primero.</p>
+        </div>
+        <div class="bg-white rounded-3xl p-8 shadow-sm" data-anim="fade-up" data-delay="300">
+          <div class="w-14 h-14 rounded-2xl bg-rose-100 text-rose-600 flex items-center justify-center text-2xl mb-5">
+            <i class="fa-solid fa-lightbulb"></i>
+          </div>
+          <h3 class="font-display text-xl font-bold mb-3">Innovación</h3>
+          <p class="text-gray-600">Nos formamos continuamente para traerte las últimas tendencias y técnicas del sector.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 hero-gradient">
+    <div class="max-w-4xl mx-auto px-4 text-center" data-anim="zoom-in">
+      <h2 class="font-display text-3xl sm:text-4xl font-bold text-gray-900 mb-5">¿Te unes a la familia Bella Uñas?</h2>
+      <p class="text-gray-600 mb-8">Reserva tu primera cita y descubre por qué somos el salón favorito de la ciudad.</p>
+      <a href="contacto.html" class="btn-primary text-base"><i class="fa-regular fa-calendar-check"></i> Reservar primera cita</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-gray-300 pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <div>
+          <div class="flex items-center gap-2 mb-4">
+            <img src="assets/logo.svg" alt="" class="w-10 h-10">
+            <span class="font-display text-xl font-bold text-white">Bella Uñas</span>
+          </div>
+          <p class="text-sm text-gray-400 mb-5">Donde tus manos cuentan tu historia. Salón de manicura profesional desde 2015.</p>
+          <div class="flex gap-3">
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="w-9 h-9 bg-white/5 hover:bg-rose-500 rounded-full flex items-center justify-center transition-colors"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="w-9 h-9 bg-white/5 hover:bg-rose-500 rounded-full flex items-center justify-center transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://tiktok.com" target="_blank" rel="noopener" class="w-9 h-9 bg-white/5 hover:bg-rose-500 rounded-full flex items-center justify-center transition-colors"><i class="fa-brands fa-tiktok"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">Navegación</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="index.html" class="hover:text-rose-400 transition-colors">Inicio</a></li>
+            <li><a href="sobre-nosotros.html" class="hover:text-rose-400 transition-colors">Sobre nosotros</a></li>
+            <li><a href="servicios.html" class="hover:text-rose-400 transition-colors">Servicios</a></li>
+            <li><a href="galeria.html" class="hover:text-rose-400 transition-colors">Galería</a></li>
+            <li><a href="precios.html" class="hover:text-rose-400 transition-colors">Precios</a></li>
+            <li><a href="horario-clases.html" class="hover:text-rose-400 transition-colors">Horario de clases</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">Servicios</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="servicios.html" class="hover:text-rose-400 transition-colors">Manicura</a></li>
+            <li><a href="servicios.html" class="hover:text-rose-400 transition-colors">Pedicura</a></li>
+            <li><a href="servicios.html" class="hover:text-rose-400 transition-colors">Nail Art</a></li>
+            <li><a href="servicios.html" class="hover:text-rose-400 transition-colors">Extensiones</a></li>
+            <li><a href="horario-clases.html" class="hover:text-rose-400 transition-colors">Clases</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">Contacto</h4>
+          <ul class="space-y-3 text-sm">
+            <li class="flex items-start gap-2"><i class="fa-solid fa-location-dot mt-1 text-rose-400"></i><span>Av. de la Belleza 123, 28001 Madrid</span></li>
+            <li class="flex items-start gap-2"><i class="fa-solid fa-phone mt-1 text-rose-400"></i><a href="tel:+34612345678" class="hover:text-rose-400">+34 612 345 678</a></li>
+            <li class="flex items-start gap-2"><i class="fa-solid fa-envelope mt-1 text-rose-400"></i><a href="mailto:hola@bellauñas.es" class="hover:text-rose-400">hola@bellauñas.es</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-white/10 pt-6 flex flex-col sm:flex-row justify-between gap-3 text-xs text-gray-500">
+        <p>© <span id="current-year"></span> Bella Uñas Studio. Todos los derechos reservados.</p>
+        <div class="flex gap-4">
+          <a href="privacidad.html" class="hover:text-rose-400">Política de privacidad</a>
+          <a href="terminos.html" class="hover:text-rose-400">Términos y condiciones</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="scroll-top" aria-label="Volver arriba" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+  <script>
+    const st = document.getElementById('scroll-top');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 600) st.classList.add('show'); else st.classList.remove('show');
+    }, { passive: true });
+  </script>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto | Bella Uñas Studio</title>
+  <meta name="description" content="Reserva tu cita, consulta horarios, ubicación y redes sociales de Bella Uñas Studio.">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter','system-ui','sans-serif'], display: ['"Playfair Display"','serif'] } } } }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+</head>
+<body class="bg-white text-gray-800">
+
+  <!-- NAVBAR -->
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 py-4">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2 group">
+        <img src="assets/logo.svg" alt="Bella Uñas" class="w-10 h-10 group-hover:scale-110 transition-transform">
+        <span class="font-display text-xl font-bold text-gray-800 hidden sm:block">Bella Uñas</span>
+      </a>
+      <ul class="hidden lg:flex items-center gap-7 text-sm font-medium text-gray-700">
+        <li><a href="index.html" data-nav="index.html">Inicio</a></li>
+        <li><a href="sobre-nosotros.html" data-nav="sobre-nosotros.html">Sobre nosotros</a></li>
+        <li><a href="servicios.html" data-nav="servicios.html">Servicios</a></li>
+        <li><a href="galeria.html" data-nav="galeria.html">Galería</a></li>
+        <li><a href="precios.html" data-nav="precios.html">Precios</a></li>
+        <li><a href="horario-clases.html" data-nav="horario-clases.html">Clases</a></li>
+        <li><a href="contacto.html" data-nav="contacto.html">Contacto</a></li>
+      </ul>
+      <a href="contacto.html" class="btn-primary hidden lg:inline-flex"><i class="fa-regular fa-calendar-check"></i> Reservar cita</a>
+      <button id="burger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+    </nav>
+  </header>
+  <div id="mobile-menu-backdrop"></div>
+  <div id="mobile-menu" aria-hidden="true">
+    <a href="index.html">Inicio</a>
+    <a href="sobre-nosotros.html">Sobre nosotros</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="galeria.html">Galería</a>
+    <a href="precios.html">Precios</a>
+    <a href="horario-clases.html">Horario de clases</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="privacidad.html">Privacidad</a>
+    <a href="terminos.html">Términos</a>
+    <a href="contacto.html" class="btn-primary mt-4 justify-center"><i class="fa-regular fa-calendar-check"></i> Reservar cita</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero-gradient pt-32 pb-16 lg:pt-40 lg:pb-20 relative">
+    <div class="blob bg-rose-300 w-96 h-96 top-0 right-1/4"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="text-center max-w-3xl mx-auto" data-anim="fade-up">
+        <span class="text-rose-500 font-semibold text-sm uppercase tracking-wider">Contacto</span>
+        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold mt-3 mb-5 text-gray-900">
+          Estamos para <span class="bg-gradient-to-r from-rose-500 to-pink-500 bg-clip-text text-transparent">ti</span>
+        </h1>
+        <p class="text-lg text-gray-600">Reserva tu cita, escríbenos por WhatsApp o visítanos. ¡Te esperamos!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- INFO RÁPIDA -->
+  <section class="py-12 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <a href="tel:+34612345678" class="card-hover bg-rose-50 rounded-2xl p-6 flex items-center gap-4 border border-rose-100" data-anim="fade-up" data-delay="100">
+          <div class="w-12 h-12 rounded-xl bg-rose-500 text-white flex items-center justify-center text-xl shrink-0">
+            <i class="fa-solid fa-phone"></i>
+          </div>
+          <div>
+            <p class="text-xs text-gray-500 uppercase tracking-wider">Teléfono</p>
+            <p class="font-semibold text-gray-800">+34 612 345 678</p>
+          </div>
+        </a>
+        <a href="mailto:hola@bellauñas.es" class="card-hover bg-rose-50 rounded-2xl p-6 flex items-center gap-4 border border-rose-100" data-anim="fade-up" data-delay="200">
+          <div class="w-12 h-12 rounded-xl bg-rose-500 text-white flex items-center justify-center text-xl shrink-0">
+            <i class="fa-solid fa-envelope"></i>
+          </div>
+          <div>
+            <p class="text-xs text-gray-500 uppercase tracking-wider">Email</p>
+            <p class="font-semibold text-gray-800 text-sm">hola@bellauñas.es</p>
+          </div>
+        </a>
+        <a href="https://wa.me/34612345678" target="_blank" rel="noopener" class="card-hover bg-rose-50 rounded-2xl p-6 flex items-center gap-4 border border-rose-100" data-anim="fade-up" data-delay="300">
+          <div class="w-12 h-12 rounded-xl bg-green-500 text-white flex items-center justify-center text-xl shrink-0">
+            <i class="fa-brands fa-whatsapp"></i>
+          </div>
+          <div>
+            <p class="text-xs text-gray-500 uppercase tracking-wider">WhatsApp</p>
+            <p class="font-semibold text-gray-800">+34 612 345 678</p>
+          </div>
+        </a>
+        <div class="card-hover bg-rose-50 rounded-2xl p-6 flex items-center gap-4 border border-rose-100" data-anim="fade-up" data-delay="400">
+          <div class="w-12 h-12 rounded-xl bg-rose-500 text-white flex items-center justify-center text-xl shrink-0">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+          <div>
+            <p class="text-xs text-gray-500 uppercase tracking-wider">Dirección</p>
+            <p class="font-semibold text-gray-800 text-sm">Av. de la Belleza 123</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMULARIO + MAPA + HORARIO -->
+  <section class="py-20 lg:py-28 bg-rose-50/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-5 gap-8">
+
+      <!-- FORMULARIO (3 cols) -->
+      <div class="lg:col-span-3">
+        <div class="bg-white rounded-3xl shadow-sm border border-rose-100 p-6 sm:p-10" data-anim="fade-right">
+          <h2 class="font-display text-3xl font-bold text-gray-900 mb-2">Reserva tu cita</h2>
+          <p class="text-gray-600 mb-6">Completa el formulario y te confirmaremos por WhatsApp en menos de 2 horas.</p>
+
+          <form id="contact-form">
+            <div class="grid sm:grid-cols-2 gap-4 mb-4">
+              <div>
+                <label for="nombre" class="block text-sm font-medium text-gray-700 mb-1.5">Nombre completo *</label>
+                <input id="nombre" name="nombre" type="text" required class="field-input" placeholder="Tu nombre">
+                <span data-error="nombre" class="field-error"></span>
+              </div>
+              <div>
+                <label for="email" class="block text-sm font-medium text-gray-700 mb-1.5">Email *</label>
+                <input id="email" name="email" type="email" required class="field-input" placeholder="tu@email.com">
+                <span data-error="email" class="field-error"></span>
+              </div>
+            </div>
+
+            <div class="grid sm:grid-cols-2 gap-4 mb-4">
+              <div>
+                <label for="telefono" class="block text-sm font-medium text-gray-700 mb-1.5">Teléfono *</label>
+                <input id="telefono" name="telefono" type="tel" required class="field-input" placeholder="+34 600 000 000">
+                <span data-error="telefono" class="field-error"></span>
+              </div>
+              <div>
+                <label for="servicio" class="block text-sm font-medium text-gray-700 mb-1.5">Servicio *</label>
+                <select id="servicio" name="servicio" required class="field-input">
+                  <option value="">Selecciona un servicio</option>
+                </select>
+                <span data-error="servicio" class="field-error"></span>
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <label for="fecha" class="block text-sm font-medium text-gray-700 mb-1.5">Fecha preferida</label>
+              <input id="fecha" name="fecha" type="date" class="field-input">
+            </div>
+
+            <div class="mb-4">
+              <label for="mensaje" class="block text-sm font-medium text-gray-700 mb-1.5">Mensaje *</label>
+              <textarea id="mensaje" name="mensaje" rows="4" required class="field-input resize-none" placeholder="Cuéntanos qué te gustaría, ideas, dudas…"></textarea>
+              <span data-error="mensaje" class="field-error"></span>
+            </div>
+
+            <label class="flex items-start gap-2 mb-6 text-sm text-gray-600 cursor-pointer">
+              <input id="privacidad" name="privacidad" type="checkbox" class="mt-1 accent-rose-500">
+              <span>Acepto la <a href="privacidad.html" class="text-rose-600 hover:underline">política de privacidad</a>.</span>
+            </label>
+            <span data-error="privacidad" class="field-error -mt-4 mb-3 block"></span>
+
+            <button type="submit" class="btn-primary w-full justify-center text-base py-3">
+              <i class="fa-regular fa-paper-plane"></i> Enviar solicitud
+            </button>
+          </form>
+
+          <div id="contact-success" class="hidden flex-col items-center text-center bg-green-50 border-2 border-green-200 text-green-800 rounded-2xl p-6 mt-6">
+            <i class="fa-solid fa-circle-check text-4xl text-green-500 mb-3"></i>
+            <h3 class="font-bold text-lg mb-2">¡Mensaje enviado!</h3>
+            <p class="text-sm">Te contactaremos en menos de 2 horas. ¡Gracias!</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- MAPA + HORARIO (2 cols) -->
+      <div class="lg:col-span-2 space-y-6" data-anim="fade-left">
+        <!-- Mapa -->
+        <div class="bg-white rounded-3xl shadow-sm border border-rose-100 overflow-hidden">
+          <div class="aspect-[4/3]">
+            <iframe
+              src="https://www.openstreetmap.org/export/embed.html?bbox=-3.71%2C40.41%2C-3.69%2C40.42&layer=mapnik&marker=40.4168%2C-3.7038"
+              width="100%" height="100%" style="border:0;" allowfullscreen loading="lazy" title="Ubicación Bella Uñas Studio"></iframe>
+          </div>
+        </div>
+
+        <!-- Horario -->
+        <div class="bg-white rounded-3xl shadow-sm border border-rose-100 p-6">
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-10 h-10 rounded-xl bg-rose-500 text-white flex items-center justify-center">
+              <i class="fa-regular fa-clock"></i>
+            </div>
+            <h3 class="font-display text-xl font-bold text-gray-800">Horario de atención</h3>
+          </div>
+          <ul id="hours-container" class="divide-y divide-rose-50"></ul>
+        </div>
+
+        <!-- Redes sociales -->
+        <div class="bg-gradient-to-br from-rose-500 to-pink-500 text-white rounded-3xl shadow-sm p-6 text-center">
+          <h3 class="font-display text-xl font-bold mb-2">Síguenos</h3>
+          <p class="text-sm text-rose-100 mb-5">Inspírate con nuestros trabajos en redes</p>
+          <div class="flex justify-center gap-3">
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="w-11 h-11 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center text-lg transition-colors"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="w-11 h-11 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center text-lg transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://tiktok.com" target="_blank" rel="noopener" class="w-11 h-11 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center text-lg transition-colors"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://wa.me/34612345678" target="_blank" rel="noopener" class="w-11 h-11 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center text-lg transition-colors"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ RÁPIDA -->
+  <section class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="text-gray-600">¿Tienes preguntas rápidas?</p>
+      <p class="text-gray-800 mt-2">Consulta nuestras <a href="precios.html#faq" class="text-rose-600 font-semibold hover:underline">preguntas frecuentes</a> o escríbenos por <a href="https://wa.me/34612345678" target="_blank" rel="noopener" class="text-green-600 font-semibold hover:underline">WhatsApp</a>.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-gray-300 pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <div>
+          <div class="flex items-center gap-2 mb-4">
+            <img src="assets/logo.svg" alt="" class="w-10 h-10">
+            <span class="font-display text-xl font-bold text-white">Bella Uñas</span>
+          </div>
+          <p class="text-sm text-gray-400 mb-5">Donde tus manos cuentan tu historia. Salón de manicura profesional desde 2015.</p>
+          <div class="flex gap-3">
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="w-9 h-9 bg-white/5 hover:bg-rose-500 rounded-full flex items-center justify-center transition-colors"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="w-9 h-9 bg-white/5 hover:bg-rose-500 rounded-full flex items-center justify-center transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://tiktok.com" target="_blank" rel="noopener" class="w-9 h-9 bg-white/5 hover:bg-rose-500 rounded-full flex items-center justify-center transition-colors"><i class="fa-brands fa-tiktok"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">Navegación</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="index.html" class="hover:text-rose-400 transition-colors">Inicio</a></li>
+            <li><a href="sobre-nosotros.html" class="hover:text-rose-400 transition-colors">Sobre nosotros</a></li>
+            <li><a href="servicios.html" class="hover:text-rose-400 transition-colors">Servicios</a></li>
+            <li><a href="galeria.html" class="hover:text-rose-400 transition-colors">Galería</a></li>
+            <li><a href="precios.html" class="hover:text-rose-400 transition-colors">Precios</a></li>
+            <li><a href="horario-clases.html" class="hover:text-rose-400 transition-colors">Horario de clases</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">Servicios</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="servicios.html" class="hover:text-rose-400 transition-colors">Manicura</a></li>
+            <li><a href="servicios.html" class="hover:text-rose-400 transition-colors">Pedicura</a></li>
+            <li><a href="servicios.html" class="hover:text-rose-400 transition-colors">Nail Art</a></li>
+            <li><a href="servicios.html" class="hover:text-rose-400 transition-colors">Extensiones</a></li>
+            <li><a href="horario-clases.html" class="hover:text-rose-400 transition-colors">Clases</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">Contacto</h4>
+          <ul class="space-y-3 text-sm">
+            <li class="flex items-start gap-2"><i class="fa-solid fa-location-dot mt-1 text-rose-400"></i><span>Av. de la Belleza 123, 28001 Madrid</span></li>
+            <li class="flex items-start gap-2"><i class="fa-solid fa-phone mt-1 text-rose-400"></i><a href="tel:+34612345678" class="hover:text-rose-400">+34 612 345 678</a></li>
+            <li class="flex items-start gap-2"><i class="fa-solid fa-envelope mt-1 text-rose-400"></i><a href="mailto:hola@bellauñas.es" class="hover:text-rose-400">hola@bellauñas.es</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-white/10 pt-6 flex flex-col sm:flex-row justify-between gap-3 text-xs text-gray-500">
+        <p>© <span id="current-year"></span> Bella Uñas Studio. Todos los derechos reservados.</p>
+        <div class="flex gap-4">
+          <a href="privacidad.html" class="hover:text-rose-400">Política de privacidad</a>
+          <a href="terminos.html" class="hover:text-rose-400">Términos y condiciones</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="scroll-top" aria-label="Volver arriba" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+  <script>
+    const st = document.getElementById('scroll-top');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 600) st.classList.add('show'); else st.classList.remove('show');
+    }, { passive: true });
+
+    // Renderizar horarios desde MOCK
+    (function () {
+      const c = document.getElementById('hours-container');
+      if (!c || typeof MOCK === 'undefined') return;
+      const today = new Date().toLocaleDateString('es-ES', { weekday: 'long' });
+      const todayLower = today.charAt(0).toUpperCase() + today.slice(1);
+      c.innerHTML = MOCK.businessHours.map(h => {
+        const isToday = h.day === todayLower;
+        const isClosed = h.open === 'Cerrado';
+        return `
+          <li class="py-3 flex items-center justify-between ${isToday ? 'font-bold' : ''}">
+            <span class="text-gray-700 ${isToday ? 'text-rose-600' : ''}">
+              ${h.day} ${isToday ? '<span class="text-xs bg-rose-100 text-rose-700 px-2 py-0.5 rounded-full ml-1 font-semibold">Hoy</span>' : ''}
+            </span>
+            <span class="text-gray-600 text-sm ${isClosed ? 'text-red-500 italic' : ''}">${isClosed ? 'Cerrado' : `${h.open} - ${h.close}`}</span>
+          </li>
+        `;
+      }).join('');
+    })();
+  </script>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>

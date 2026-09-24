@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Términos y Condiciones | Bella Uñas Studio</title>
+  <meta name="description" content="Términos y condiciones de uso de los servicios de Bella Uñas Studio.">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter','system-ui','sans-serif'], display: ['"Playfair Display"','serif'] } } } }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+</head>
+<body class="bg-white text-gray-800">
+
+  <!-- NAVBAR -->
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 py-4">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2 group">
+        <img src="assets/logo.svg" alt="Bella Uñas" class="w-10 h-10 group-hover:scale-110 transition-transform">
+        <span class="font-display text-xl font-bold text-gray-800 hidden sm:block">Bella Uñas</span>
+      </a>
+      <ul class="hidden lg:flex items-center gap-7 text-sm font-medium text-gray-700">
+        <li><a href="index.html" data-nav="index.html">Inicio</a></li>
+        <li><a href="sobre-nosotros.html" data-nav="sobre-nosotros.html">Sobre nosotros</a></li>
+        <li><a href="servicios.html" data-nav="servicios.html">Servicios</a></li>
+        <li><a href="galeria.html" data-nav="galeria.html">Galería</a></li>
+        <li><a href="precios.html" data-nav="precios.html">Precios</a></li>
+        <li><a href="horario-clases.html" data-nav="horario-clases.html">Clases</a></li>
+        <li><a href="contacto.html" data-nav="contacto.html">Contacto</a></li>
+      </ul>
+      <a href="contacto.html" class="btn-primary hidden lg:inline-flex"><i class="fa-regular fa-calendar-check"></i> Reservar cita</a>
+      <button id="burger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+    </nav>
+  </header>
+  <div id="mobile-menu-backdrop"></div>
+  <div id="mobile-menu" aria-hidden="true">
+    <a href="index.html">Inicio</a>
+    <a href="sobre-nosotros.html">Sobre nosotros</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="galeria.html">Galería</a>
+    <a href="precios.html">Precios</a>
+    <a href="horario-clases.html">Horario de clases</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="privacidad.html">Privacidad</a>
+    <a href="terminos.html">Términos</a>
+    <a href="contacto.html" class="btn-primary mt-4 justify-center"><i class="fa-regular fa-calendar-check"></i> Reservar cita</a>
+  </div>
+
+  <!-- HEADER -->
+  <section class="hero-gradient pt-32 pb-12 lg:pt-40 lg:pb-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center" data-anim="fade-up">
+        <span class="text-rose-500 font-semibold text-sm uppercase tracking-wider">Legal</span>
+        <h1 class="font-display text-4xl sm:text-5xl font-bold mt-3 mb-4 text-gray-900">Términos y Condiciones</h1>
+        <p class="text-gray-600">Última actualización: enero 2026</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENIDO -->
+  <section class="py-16 lg:py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-4 gap-10">
+        <aside class="lg:col-span-1 lg:sticky lg:top-24 self-start" data-anim="fade-right">
+          <div class="bg-rose-50/50 rounded-2xl p-5 border border-rose-100">
+            <h3 class="font-bold text-gray-800 mb-3 text-sm uppercase tracking-wider">Índice</h3>
+            <ul class="space-y-2 text-sm">
+              <li><a href="#aceptacion" class="text-gray-600 hover:text-rose-600">1. Aceptación</a></li>
+              <li><a href="#servicios" class="text-gray-600 hover:text-rose-600">2. Servicios</a></li>
+              <li><a href="#reservas" class="text-gray-600 hover:text-rose-600">3. Reservas</a></li>
+              <li><a href="#cancelaciones" class="text-gray-600 hover:text-rose-600">4. Cancelaciones</a></li>
+              <li><a href="#precios" class="text-gray-600 hover:text-rose-600">5. Precios y pagos</a></li>
+              <li><a href="#garantias" class="text-gray-600 hover:text-rose-600">6. Garantías</a></li>
+              <li><a href="#obligaciones" class="text-gray-600 hover:text-rose-600">7. Obligaciones</a></li>
+              <li><a href="#propiedad" class="text-gray-600 hover:text-rose-600">8. Propiedad intelectual</a></li>
+              <li><a href="#limitacion" class="text-gray-600 hover:text-rose-600">9. Limitación</a></li>
+              <li><a href="#ley" class="text-gray-600 hover:text-rose-600">10. Ley aplicable</a></li>
+            </ul>
+          </div>
+        </aside>
+
+        <article class="lg:col-span-3 text-gray-700" data-anim="fade-left">
+          <p class="lead text-lg mb-8 text-gray-600">
+            Estos términos y condiciones regulan el acceso y uso de los servicios ofrecidos por <strong>Bella Uñas Studio</strong>. Al contratar nuestros servicios o utilizar nuestro sitio web, aceptas estos términos en su totalidad.
+          </p>
+
+          <h2 id="aceptacion" class="font-display text-2xl font-bold text-gray-900 mt-10 mb-3">1. Aceptación de los términos</h2>
+          <p>Al reservar cualquiera de nuestros servicios o utilizar este sitio web, el usuario acepta plenamente y sin reservas las disposiciones contenidas en estos términos y condiciones. Si no estás de acuerdo con alguna de estas disposiciones, te rogamos que no utilices nuestros servicios.</p>
+
+          <h2 id="servicios" class="font-display text-2xl font-bold text-gray-900 mt-10 mb-3">2. Descripción de los servicios</h2>
+          <p>Bella Uñas Studio ofrece servicios de manicura, pedicura, nail art, extensiones de uñas, tratamientos capilares y clases de formación. La descripción detallada de cada servicio, su duración y precio está disponible en nuestro sitio web y se actualiza periódicamente.</p>
+          <p>Nos reservamos el derecho de modificar, suspender o interrumpir cualquier servicio sin previo aviso.</p>
+
+          <h2 id="reservas" class="font-display text-2xl font-bold text-gray-900 mt-10 mb-3">3. Sistema de reservas</h2>
+          <ul class="list-disc pl-6 space-y-1.5">
+            <li>Las reservas se pueden realizar online a través de este sitio web, por WhatsApp, por teléfono o presencialmente en nuestro salón.</li>
+            <li>La reserva queda confirmada una vez recibida nuestra confirmación (por email, WhatsApp o teléfono).</li>
+            <li>Es responsabilidad del cliente proporcionar datos de contacto verídicos.</li>
+            <li>Los menores de 16 años deben asistir acompañados de un adulto.</li>
+          </ul>
+
+          <h2 id="cancelaciones" class="font-display text-2xl font-bold text-gray-900 mt-10 mb-3">4. Política de cancelación y cambios</h2>
+          <ul class="list-disc pl-6 space-y-1.5">
+            <li>Las cancelaciones o cambios de cita deben comunicarse con al menos <strong>24 horas de antelación</strong>.</li>
+            <li>Cancelaciones con menos de 24 horas o inasistencia ("no show") pueden estar sujetas a un cargo del 50% del servicio reservado.</li>
+            <li>En caso de fuerza mayor (enfermedad, accidente) documentada, no se aplicará ningún cargo.</li>
+            <li>Bella Uñas se reserva el derecho de cancelar o reprogramar una cita por causas justificadas, ofreciendo alternativas o devolución íntegra.</li>
+          </ul>
+
+          <h2 id="precios" class="font-display text-2xl font-bold text-gray-900 mt-10 mb-3">5. Precios y métodos de pago</h2>
+          <ul class="list-disc pl-6 space-y-1.5">
+            <li>Todos los precios están indicados en euros e incluyen el IVA aplicable.</li>
+            <li>Aceptamos efectivo, tarjeta de crédito/débito, Bizum, Apple Pay y Google Pay.</li>
+            <li>El pago se realiza al finalizar el servicio, salvo en cursos y paquetes que requieran señal.</li>
+            <li>Los precios pueden modificarse sin previo aviso, pero se respetará el precio confirmado en la reserva.</li>
+          </ul>
+
+          <h2 id="garantias" class="font-display text-2xl font-bold text-gray-900 mt-10 mb-3">6. Garantía de satisfacción</h2>
+          <p>Si no quedas satisfecha con el resultado del servicio, te pedimos que nos lo comuniques antes de abandonar el salón para poder corregirlo sin coste adicional. Una vez finalizado y abandonado el local, se considerará el servicio aceptado.</p>
+          <p>Para servicios de esmaltado gel y acrílicos ofrecemos garantía de duración razonable: si notas cualquier desperfecto causado por aplicación defectuosa, lo reparamos gratuitamente en un plazo de 7 días.</p>
+
+          <h2 id="obligaciones" class="font-display text-2xl font-bold text-gray-900 mt-10 mb-3">7. Obligaciones del usuario</h2>
+          <p>El usuario se compromete a:</p>
+          <ul class="list-disc pl-6 space-y-1.5">
+            <li>Informar con veracidad sobre cualquier alergia, condición médica o tratamiento que pueda afectar al servicio.</li>
+            <li>Respetar los horarios de cita.</li>
+            <li>Tratar con respeto al personal y a las instalaciones.</li>
+            <li>No realizar grabaciones sin consentimiento previo.</li>
+          </ul>
+
+          <h2 id="propiedad" class="font-display text-2xl font-bold text-gray-900 mt-10 mb-3">8. Propiedad intelectual</h2>
+          <p>Todos los contenidos de este sitio web (textos, imágenes, diseños, logos) son propiedad de Bella Uñas Studio o de sus respectivos titulares y están protegidos por la legislación de propiedad intelectual. Queda prohibida su reproducción total o parcial sin autorización expresa.</p>
+
+          <h2 id="limitacion" class="font-display text-2xl font-bold text-gray-900 mt-10 mb-3">9. Limitación de responsabilidad</h2>
+          <p>Bella Uñas Studio no será responsable de:</p>
+          <ul class="list-disc pl-6 space-y-1.5">
+            <li>Reacciones alérgicas no comunicadas previamente.</li>
+            <li>Daños en uñas o piel derivados del incumplimiento de las recomendaciones post-servicio.</li>
+            <li>Interrupciones del servicio por causas de fuerza mayor.</li>
+            <li>Contenido de sitios web externos enlazados.</li>
+          </ul>
+
+          <h2 id="ley" class="font-display text-2xl font-bold text-gray-900 mt-10 mb-3">10. Ley aplicable y jurisdicción</h2>
+          <p>Estos términos se rigen por la legislación española. Para la resolución de cualquier controversia, las partes se someten expresamente a los Juzgados y Tribunales de Madrid capital.</p>
+
+          <div class="mt-12 p-6 bg-rose-50/50 border border-rose-100 rounded-2xl">
+            <p class="text-sm text-gray-700 mb-0"><i class="fa-solid fa-circle-info text-rose-500 mr-2"></i> Si tienes cualquier duda sobre estos términos, escríbenos a <strong>hola@bellauñas.es</strong> antes de contratar cualquier servicio.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-gray-300 pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <div>
+          <div class="flex items-center gap-2 mb-4">
+            <img src="assets/logo.svg" alt="" class="w-10 h-10">
+            <span class="font-display text-xl font-bold text-white">Bella Uñas</span>
+          </div>
+          <p class="text-sm text-gray-400 mb-5">Donde tus manos cuentan tu historia. Salón de manicura profesional desde 2015.</p>
+          <div class="flex gap-3">
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="w-9 h-9 bg-white/5 hover:bg-rose-500 rounded-full flex items-center justify-center transition-colors"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="w-9 h-9 bg-white/5 hover:bg-rose-500 rounded-full flex items-center justify-center transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://tiktok.com" target="_blank" rel="noopener" class="w-9 h-9 bg-white/5 hover:bg-rose-500 rounded-full flex items-center justify-center transition-colors"><i class="fa-brands fa-tiktok"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">Navegación</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="index.html" class="hover:text-rose-400 transition-colors">Inicio</a></li>
+            <li><a href="sobre-nosotros.html" class="hover:text-rose-400 transition-colors">Sobre nosotros</a></li>
+            <li><a href="servicios.html" class="hover:text-rose-400 transition-colors">Servicios</a></li>
+            <li><a href="galeria.html" class="hover:text-rose-400 transition-colors">Galería</a></li>
+            <li><a href="precios.html" class="hover:text-rose-400 transition-colors">Precios</a></li>
+            <li><a href="horario-clases.html" class="hover:text-rose-400 transition-colors">Horario de clases</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">Servicios</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="servicios.html" class="hover:text-rose-400 transition-colors">Manicura</a></li>
+            <li><a href="servicios.html" class="hover:text-rose-400 transition-colors">Pedicura</a></li>
+            <li><a href="servicios.html" class="hover:text-rose-400 transition-colors">Nail Art</a></li>
+            <li><a href="servicios.html" class="hover:text-rose-400 transition-colors">Extensiones</a></li>
+            <li><a href="horario-clases.html" class="hover:text-rose-400 transition-colors">Clases</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">Contacto</h4>
+          <ul class="space-y-3 text-sm">
+            <li class="flex items-start gap-2"><i class="fa-solid fa-location-dot mt-1 text-rose-400"></i><span>Av. de la Belleza 123, 28001 Madrid</span></li>
+            <li class="flex items-start gap-2"><i class="fa-solid fa-phone mt-1 text-rose-400"></i><a href="tel:+34612345678" class="hover:text-rose-400">+34 612 345 678</a></li>
+            <li class="flex items-start gap-2"><i class="fa-solid fa-envelope mt-1 text-rose-400"></i><a href="mailto:hola@bellauñas.es" class="hover:text-rose-400">hola@bellauñas.es</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-white/10 pt-6 flex flex-col sm:flex-row justify-between gap-3 text-xs text-gray-500">
+        <p>© <span id="current-year"></span> Bella Uñas Studio. Todos los derechos reservados.</p>
+        <div class="flex gap-4">
+          <a href="privacidad.html" class="hover:text-rose-400">Política de privacidad</a>
+          <a href="terminos.html" class="hover:text-rose-400">Términos y condiciones</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="scroll-top" aria-label="Volver arriba" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+  <script>
+    const st = document.getElementById('scroll-top');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 600) st.classList.add('show'); else st.classList.remove('show');
+    }, { passive: true });
+  </script>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

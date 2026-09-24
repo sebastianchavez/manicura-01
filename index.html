@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bella Uñas Studio | Servicios de Manicura Profesional</title>
+  <meta name="description" content="Salón de manicura y pedicura profesional. Manicura rusa, gel, nail art, extensiones y clases. Reserva tu cita en Bella Uñas Studio.">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['"Playfair Display"', 'serif'],
+          },
+          colors: {
+            brand: {
+              50:  '#fff1f2',
+              100: '#ffe4e6',
+              200: '#fecdd3',
+              500: '#f43f5e',
+              600: '#e11d48',
+              700: '#be123c',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+</head>
+<body class="bg-white text-gray-800">
+
+  <!-- ============== NAVBAR ============== -->
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 py-4">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2 group">
+        <img src="assets/logo.svg" alt="Bella Uñas" class="w-10 h-10 group-hover:scale-110 transition-transform">
+        <span class="font-display text-xl font-bold text-gray-800 hidden sm:block">Bella Uñas</span>
+      </a>
+
+      <ul class="hidden lg:flex items-center gap-7 text-sm font-medium text-gray-700">
+        <li><a href="index.html" data-nav="index.html">Inicio</a></li>
+        <li><a href="sobre-nosotros.html" data-nav="sobre-nosotros.html">Sobre nosotros</a></li>
+        <li><a href="servicios.html" data-nav="servicios.html">Servicios</a></li>
+        <li><a href="galeria.html" data-nav="galeria.html">Galería</a></li>
+        <li><a href="precios.html" data-nav="precios.html">Precios</a></li>
+        <li><a href="horario-clases.html" data-nav="horario-clases.html">Clases</a></li>
+        <li><a href="contacto.html" data-nav="contacto.html">Contacto</a></li>
+      </ul>
+
+      <a href="contacto.html" class="btn-primary hidden lg:inline-flex">
+        <i class="fa-regular fa-calendar-check"></i> Reservar cita
+      </a>
+
+      <button id="burger" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu-backdrop"></div>
+  <div id="mobile-menu" aria-hidden="true">
+    <a href="index.html">Inicio</a>
+    <a href="sobre-nosotros.html">Sobre nosotros</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="galeria.html">Galería</a>
+    <a href="precios.html">Precios</a>
+    <a href="horario-clases.html">Horario de clases</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="privacidad.html">Privacidad</a>
+    <a href="terminos.html">Términos</a>
+    <a href="contacto.html" class="btn-primary mt-4 justify-center">
+      <i class="fa-regular fa-calendar-check"></i> Reservar cita
+    </a>
+  </div>
+
+  <!-- ============== HERO ============== -->
+  <section class="hero-gradient pt-32 pb-20 lg:pt-40 lg:pb-28 relative overflow-hidden">
+    <div class="blob bg-rose-300 w-96 h-96 -top-20 -left-20"></div>
+    <div class="blob bg-pink-300 w-96 h-96 bottom-0 right-0"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center relative">
+      <div data-anim="fade-right">
+        <span class="inline-flex items-center gap-2 px-4 py-1.5 bg-white/70 backdrop-blur rounded-full text-rose-600 text-sm font-medium mb-6 border border-rose-100">
+          <i class="fa-solid fa-sparkles"></i> Donde tus manos cuentan tu historia
+        </span>
+        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-gray-900 mb-6">
+          Arte en cada
+          <span class="bg-gradient-to-r from-rose-500 to-pink-500 bg-clip-text text-transparent">uña</span>
+        </h1>
+        <p class="text-lg text-gray-600 mb-8 max-w-lg">
+          Manicura profesional, nail art personalizado y tratamientos premium para que tus manos luzcan siempre impecables.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="contacto.html" class="btn-primary text-base">
+            <i class="fa-regular fa-calendar-check"></i> Reservar cita
+          </a>
+          <a href="servicios.html" class="btn-secondary text-base">
+            Ver servicios <i class="fa-solid fa-arrow-right text-sm"></i>
+          </a>
+        </div>
+
+        <div class="mt-10 flex items-center gap-6">
+          <div class="flex -space-x-3">
+            <img src="https://i.pravatar.cc/48?img=5"  alt="" class="w-12 h-12 rounded-full border-2 border-white">
+            <img src="https://i.pravatar.cc/48?img=9"  alt="" class="w-12 h-12 rounded-full border-2 border-white">
+            <img src="https://i.pravatar.cc/48?img=10" alt="" class="w-12 h-12 rounded-full border-2 border-white">
+            <img src="https://i.pravatar.cc/48?img=16" alt="" class="w-12 h-12 rounded-full border-2 border-white">
+          </div>
+          <div>
+            <div class="flex items-center gap-1 text-amber-400">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="text-sm text-gray-600"><strong>2.500+</strong> clientas felices</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative" data-anim="fade-left">
+        <div class="relative rounded-[2.5rem] overflow-hidden shadow-2xl aspect-[4/5] max-w-md mx-auto lg:max-w-none float-animation">
+          <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=900&auto=format&fit=crop&q=80"
+               alt="Manicura profesional"
+               class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-rose-900/30 to-transparent"></div>
+        </div>
+        <div class="absolute -bottom-6 -left-4 sm:-left-8 bg-white rounded-2xl shadow-xl p-4 flex items-center gap-3 max-w-xs" data-anim="zoom-in" data-delay="300">
+          <div class="w-12 h-12 rounded-full bg-rose-100 flex items-center justify-center text-rose-500">
+            <i class="fa-solid fa-heart text-xl"></i>
+          </div>
+          <div>
+            <p class="text-xs text-gray-500">+ 500 reseñas</p>
+            <p class="font-bold text-gray-800">4.9 / 5.0</p>
+          </div>
+        </div>
+        <div class="absolute -top-4 -right-4 sm:-right-8 bg-white rounded-2xl shadow-xl p-4 hidden sm:block" data-anim="zoom-in" data-delay="400">
+          <div class="flex items-center gap-2 text-sm">
+            <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+            <span class="text-gray-700 font-medium">Abierto ahora</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== SERVICIOS DESTACADOS ============== -->
+  <section class="py-20 lg:py-28 bg-white relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-16" data-anim="fade-up">
+        <span class="text-rose-500 font-semibold text-sm uppercase tracking-wider">Nuestros servicios</span>
+        <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold mt-3 mb-4 text-gray-900">Tratamientos para brillar</h2>
+        <p class="text-gray-600">Técnicas profesionales, productos premium y resultados que enamoran.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Service Card 1 -->
+        <article class="card-hover bg-white border border-rose-100 rounded-3xl p-8 text-center" data-anim="fade-up" data-delay="100">
+          <div class="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br from-rose-400 to-pink-500 flex items-center justify-center text-white text-2xl mb-5 shadow-lg">
+            <i class="fa-solid fa-gem"></i>
+          </div>
+          <h3 class="font-display text-xl font-bold mb-2">Manicura Gel</h3>
+          <p class="text-gray-600 text-sm mb-4">Esmaltado semipermanente con acabado brillante y duración de hasta 3 semanas.</p>
+          <div class="flex items-center justify-between text-sm pt-4 border-t border-rose-50">
+            <span class="text-gray-500"><i class="fa-regular fa-clock"></i> 45 min</span>
+            <span class="font-bold text-rose-600">Desde 30€</span>
+          </div>
+        </article>
+
+        <!-- Service Card 2 -->
+        <article class="card-hover bg-white border border-rose-100 rounded-3xl p-8 text-center" data-anim="fade-up" data-delay="200">
+          <div class="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br from-rose-400 to-pink-500 flex items-center justify-center text-white text-2xl mb-5 shadow-lg">
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <h3 class="font-display text-xl font-bold mb-2">Manicura Rusa</h3>
+          <p class="text-gray-600 text-sm mb-4">Técnica precisa con torno para cutículas perfectas y acabado impecable.</p>
+          <div class="flex items-center justify-between text-sm pt-4 border-t border-rose-50">
+            <span class="text-gray-500"><i class="fa-regular fa-clock"></i> 60 min</span>
+            <span class="font-bold text-rose-600">Desde 40€</span>
+          </div>
+        </article>
+
+        <!-- Service Card 3 -->
+        <article class="card-hover bg-white border border-rose-100 rounded-3xl p-8 text-center" data-anim="fade-up" data-delay="300">
+          <div class="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br from-rose-400 to-pink-500 flex items-center justify-center text-white text-2xl mb-5 shadow-lg">
+            <i class="fa-solid fa-palette"></i>
+          </div>
+          <h3 class="font-display text-xl font-bold mb-2">Nail Art</h3>
+          <p class="text-gray-600 text-sm mb-4">Diseños únicos a mano alzada: flores, geometría, minimalismo y más.</p>
+          <div class="flex items-center justify-between text-sm pt-4 border-t border-rose-50">
+            <span class="text-gray-500"><i class="fa-regular fa-clock"></i> 60 min</span>
+            <span class="font-bold text-rose-600">Desde 50€</span>
+          </div>
+        </article>
+
+        <!-- Service Card 4 -->
+        <article class="card-hover bg-white border border-rose-100 rounded-3xl p-8 text-center" data-anim="fade-up" data-delay="100">
+          <div class="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br from-rose-400 to-pink-500 flex items-center justify-center text-white text-2xl mb-5 shadow-lg">
+            <i class="fa-solid fa-spa"></i>
+          </div>
+          <h3 class="font-display text-xl font-bold mb-2">Pedicura Spa</h3>
+          <p class="text-gray-600 text-sm mb-4">Exfoliación, masaje relajante, hidratación profunda y esmaltado.</p>
+          <div class="flex items-center justify-between text-sm pt-4 border-t border-rose-50">
+            <span class="text-gray-500"><i class="fa-regular fa-clock"></i> 60 min</span>
+            <span class="font-bold text-rose-600">Desde 35€</span>
+          </div>
+        </article>
+
+        <!-- Service Card 5 -->
+        <article class="card-hover bg-white border border-rose-100 rounded-3xl p-8 text-center" data-anim="fade-up" data-delay="200">
+          <div class="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br from-rose-400 to-pink-500 flex items-center justify-center text-white text-2xl mb-5 shadow-lg">
+            <i class="fa-solid fa-magic"></i>
+          </div>
+          <h3 class="font-display text-xl font-bold mb-2">Extensiones Acrílicas</h3>
+          <p class="text-gray-600 text-sm mb-4">Uñas largas, resistentes y moldeadas a tu estilo con técnica profesional.</p>
+          <div class="flex items-center justify-between text-sm pt-4 border-t border-rose-50">
+            <span class="text-gray-500"><i class="fa-regular fa-clock"></i> 120 min</span>
+            <span class="font-bold text-rose-600">Desde 70€</span>
+          </div>
+        </article>
+
+        <!-- Service Card 6 -->
+        <article class="card-hover bg-white border border-rose-100 rounded-3xl p-8 text-center" data-anim="fade-up" data-delay="300">
+          <div class="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br from-rose-400 to-pink-500 flex items-center justify-center text-white text-2xl mb-5 shadow-lg">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </div>
+          <h3 class="font-display text-xl font-bold mb-2">Clases & Cursos</h3>
+          <p class="text-gray-600 text-sm mb-4">Aprende las técnicas de la mano de profesionales. Cursos para todos los niveles.</p>
+          <div class="flex items-center justify-between text-sm pt-4 border-t border-rose-50">
+            <span class="text-gray-500"><i class="fa-regular fa-calendar"></i> Semanal</span>
+            <span class="font-bold text-rose-600">Desde 45€</span>
+          </div>
+        </article>
+      </div>
+
+      <div class="text-center mt-12">
+        <a href="servicios.html" class="btn-secondary">
+          Ver todos los servicios <i class="fa-solid fa-arrow-right text-sm"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== ¿POR QUÉ ELEGIRNOS? ============== -->
+  <section class="py-20 lg:py-28 bg-rose-50/50 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-16" data-anim="fade-up">
+        <span class="text-rose-500 font-semibold text-sm uppercase tracking-wider">Por qué elegirnos</span>
+        <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold mt-3 mb-4 text-gray-900">La diferencia Bella Uñas</h2>
+        <p class="text-gray-600">Calidad, experiencia y cariño en cada detalle.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="text-center" data-anim="fade-up" data-delay="100">
+          <div class="w-16 h-16 mx-auto rounded-2xl bg-white shadow-md flex items-center justify-center text-rose-500 text-2xl mb-4">
+            <i class="fa-solid fa-award"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-2">10+ Años</h3>
+          <p class="text-sm text-gray-600">de experiencia formando manos expertas.</p>
+        </div>
+        <div class="text-center" data-anim="fade-up" data-delay="200">
+          <div class="w-16 h-16 mx-auto rounded-2xl bg-white shadow-md flex items-center justify-center text-rose-500 text-2xl mb-4">
+            <i class="fa-solid fa-leaf"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-2">Productos premium</h3>
+          <p class="text-sm text-gray-600">Marcas libres de tóxicos, seguras y duraderas.</p>
+        </div>
+        <div class="text-center" data-anim="fade-up" data-delay="300">
+          <div class="w-16 h-16 mx-auto rounded-2xl bg-white shadow-md flex items-center justify-center text-rose-500 text-2xl mb-4">
+            <i class="fa-solid fa-user-check"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-2">Atención personalizada</h3>
+          <p class="text-sm text-gray-600">Asesoramos cada clienta según su estilo y necesidades.</p>
+        </div>
+        <div class="text-center" data-anim="fade-up" data-delay="400">
+          <div class="w-16 h-16 mx-auto rounded-2xl bg-white shadow-md flex items-center justify-center text-rose-500 text-2xl mb-4">
+            <i class="fa-solid fa-shield-heart"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-2">Higiene total</h3>
+          <p class="text-sm text-gray-600">Esterilización profesional y protocolos sanitarios.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== STATS ============== -->
+  <section class="py-20 bg-gradient-to-br from-rose-500 to-pink-500 text-white relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle, white 1px, transparent 1px); background-size: 24px 24px;"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+        <div data-anim="zoom-in" data-delay="100">
+          <p class="text-5xl lg:text-6xl font-display font-bold mb-2"><span data-counter="10" data-suffix="+">0</span></p>
+          <p class="text-rose-100 text-sm uppercase tracking-wider">Años de experiencia</p>
+        </div>
+        <div data-anim="zoom-in" data-delay="200">
+          <p class="text-5xl lg:text-6xl font-display font-bold mb-2"><span data-counter="2500" data-suffix="+">0</span></p>
+          <p class="text-rose-100 text-sm uppercase tracking-wider">Clientas felices</p>
+        </div>
+        <div data-anim="zoom-in" data-delay="300">
+          <p class="text-5xl lg:text-6xl font-display font-bold mb-2"><span data-counter="15">0</span></p>
+          <p class="text-rose-100 text-sm uppercase tracking-wider">Manicuristas expertas</p>
+        </div>
+        <div data-anim="zoom-in" data-delay="400">
+          <p class="text-5xl lg:text-6xl font-display font-bold mb-2"><span data-counter="50" data-suffix="+">0</span></p>
+          <p class="text-rose-100 text-sm uppercase tracking-wider">Diseños exclusivos</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== TESTIMONIOS ============== -->
+  <section class="py-20 lg:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-16" data-anim="fade-up">
+        <span class="text-rose-500 font-semibold text-sm uppercase tracking-wider">Testimonios</span>
+        <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold mt-3 mb-4 text-gray-900">Lo que dicen nuestras clientas</h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <article class="bg-rose-50/60 rounded-2xl p-7 border border-rose-100" data-anim="fade-up" data-delay="100">
+          <div class="flex items-center gap-1 text-amber-400 mb-4">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="text-gray-700 mb-6 italic">"Llevo 3 años viniendo y nunca me voy defraudada. Las manicuristas son encantadoras y el resultado siempre es impecable."</p>
+          <div class="flex items-center gap-3">
+            <img src="https://i.pravatar.cc/48?img=5" alt="" class="w-11 h-11 rounded-full">
+            <div>
+              <p class="font-semibold text-gray-800">María G.</p>
+              <p class="text-xs text-gray-500">Clienta habitual</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="bg-rose-50/60 rounded-2xl p-7 border border-rose-100" data-anim="fade-up" data-delay="200">
+          <div class="flex items-center gap-1 text-amber-400 mb-4">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="text-gray-700 mb-6 italic">"Mi manicura de boda fue perfecta. Me asesoraron en colores y diseño, ¡fue un éxito total! Las recomiendo 100%."</p>
+          <div class="flex items-center gap-3">
+            <img src="https://i.pravatar.cc/48?img=9" alt="" class="w-11 h-11 rounded-full">
+            <div>
+              <p class="font-semibold text-gray-800">Laura P.</p>
+              <p class="text-xs text-gray-500">Novia 2025</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="bg-rose-50/60 rounded-2xl p-7 border border-rose-100" data-anim="fade-up" data-delay="300">
+          <div class="flex items-center gap-1 text-amber-400 mb-4">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="text-gray-700 mb-6 italic">"El paquete VIP es una maravilla. Sales como nueva, las uñas increíbles y el masaje de manos es para repetir."</p>
+          <div class="flex items-center gap-3">
+            <img src="https://i.pravatar.cc/48?img=10" alt="" class="w-11 h-11 rounded-full">
+            <div>
+              <p class="font-semibold text-gray-800">Patricia S.</p>
+              <p class="text-xs text-gray-500">Clienta VIP</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== CTA FINAL ============== -->
+  <section class="py-20 lg:py-28 hero-gradient relative overflow-hidden">
+    <div class="blob bg-rose-300 w-96 h-96 top-0 left-1/4"></div>
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative" data-anim="zoom-in">
+      <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">¿Lista para unas uñas perfectas?</h2>
+      <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">Reserva tu cita hoy y descubre por qué más de 2.500 clientas confían en nosotros.</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="contacto.html" class="btn-primary text-base pulse-glow">
+          <i class="fa-regular fa-calendar-check"></i> Reservar ahora
+        </a>
+        <a href="https://wa.me/34612345678" target="_blank" rel="noopener" class="btn-secondary text-base">
+          <i class="fa-brands fa-whatsapp"></i> WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== FOOTER ============== -->
+  <footer class="bg-gray-900 text-gray-300 pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <div>
+          <div class="flex items-center gap-2 mb-4">
+            <img src="assets/logo.svg" alt="" class="w-10 h-10">
+            <span class="font-display text-xl font-bold text-white">Bella Uñas</span>
+          </div>
+          <p class="text-sm text-gray-400 mb-5">Donde tus manos cuentan tu historia. Salón de manicura profesional desde 2015.</p>
+          <div class="flex gap-3">
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="w-9 h-9 bg-white/5 hover:bg-rose-500 rounded-full flex items-center justify-center transition-colors"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="w-9 h-9 bg-white/5 hover:bg-rose-500 rounded-full flex items-center justify-center transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://tiktok.com" target="_blank" rel="noopener" class="w-9 h-9 bg-white/5 hover:bg-rose-500 rounded-full flex items-center justify-center transition-colors"><i class="fa-brands fa-tiktok"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">Navegación</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="index.html" class="hover:text-rose-400 transition-colors">Inicio</a></li>
+            <li><a href="sobre-nosotros.html" class="hover:text-rose-400 transition-colors">Sobre nosotros</a></li>
+            <li><a href="servicios.html" class="hover:text-rose-400 transition-colors">Servicios</a></li>
+            <li><a href="galeria.html" class="hover:text-rose-400 transition-colors">Galería</a></li>
+            <li><a href="precios.html" class="hover:text-rose-400 transition-colors">Precios</a></li>
+            <li><a href="horario-clases.html" class="hover:text-rose-400 transition-colors">Horario de clases</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">Servicios</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="servicios.html#manicura" class="hover:text-rose-400 transition-colors">Manicura</a></li>
+            <li><a href="servicios.html#pedicura" class="hover:text-rose-400 transition-colors">Pedicura</a></li>
+            <li><a href="servicios.html#nail-art" class="hover:text-rose-400 transition-colors">Nail Art</a></li>
+            <li><a href="servicios.html#extensiones" class="hover:text-rose-400 transition-colors">Extensiones</a></li>
+            <li><a href="horario-clases.html" class="hover:text-rose-400 transition-colors">Clases</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">Contacto</h4>
+          <ul class="space-y-3 text-sm">
+            <li class="flex items-start gap-2"><i class="fa-solid fa-location-dot mt-1 text-rose-400"></i><span>Av. de la Belleza 123, 28001 Madrid</span></li>
+            <li class="flex items-start gap-2"><i class="fa-solid fa-phone mt-1 text-rose-400"></i><a href="tel:+34612345678" class="hover:text-rose-400">+34 612 345 678</a></li>
+            <li class="flex items-start gap-2"><i class="fa-solid fa-envelope mt-1 text-rose-400"></i><a href="mailto:hola@bellauñas.es" class="hover:text-rose-400">hola@bellauñas.es</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-white/10 pt-6 flex flex-col sm:flex-row justify-between gap-3 text-xs text-gray-500">
+        <p>© <span id="current-year"></span> Bella Uñas Studio. Todos los derechos reservados.</p>
+        <div class="flex gap-4">
+          <a href="privacidad.html" class="hover:text-rose-400">Política de privacidad</a>
+          <a href="terminos.html" class="hover:text-rose-400">Términos y condiciones</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botón scroll-to-top -->
+  <button id="scroll-top" aria-label="Volver arriba" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+  <script>
+    const st = document.getElementById('scroll-top');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 600) st.classList.add('show'); else st.classList.remove('show');
+    }, { passive: true });
+  </script>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

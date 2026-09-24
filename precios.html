@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Precios | Bella Uñas Studio</title>
+  <meta name="description" content="Lista de precios de manicura, pedicura, nail art, extensiones y paquetes especiales.">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter','system-ui','sans-serif'], display: ['"Playfair Display"','serif'] } } } }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+</head>
+<body class="bg-white text-gray-800">
+
+  <!-- NAVBAR -->
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 py-4">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2 group">
+        <img src="assets/logo.svg" alt="Bella Uñas" class="w-10 h-10 group-hover:scale-110 transition-transform">
+        <span class="font-display text-xl font-bold text-gray-800 hidden sm:block">Bella Uñas</span>
+      </a>
+      <ul class="hidden lg:flex items-center gap-7 text-sm font-medium text-gray-700">
+        <li><a href="index.html" data-nav="index.html">Inicio</a></li>
+        <li><a href="sobre-nosotros.html" data-nav="sobre-nosotros.html">Sobre nosotros</a></li>
+        <li><a href="servicios.html" data-nav="servicios.html">Servicios</a></li>
+        <li><a href="galeria.html" data-nav="galeria.html">Galería</a></li>
+        <li><a href="precios.html" data-nav="precios.html">Precios</a></li>
+        <li><a href="horario-clases.html" data-nav="horario-clases.html">Clases</a></li>
+        <li><a href="contacto.html" data-nav="contacto.html">Contacto</a></li>
+      </ul>
+      <a href="contacto.html" class="btn-primary hidden lg:inline-flex"><i class="fa-regular fa-calendar-check"></i> Reservar cita</a>
+      <button id="burger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+    </nav>
+  </header>
+  <div id="mobile-menu-backdrop"></div>
+  <div id="mobile-menu" aria-hidden="true">
+    <a href="index.html">Inicio</a>
+    <a href="sobre-nosotros.html">Sobre nosotros</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="galeria.html">Galería</a>
+    <a href="precios.html">Precios</a>
+    <a href="horario-clases.html">Horario de clases</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="privacidad.html">Privacidad</a>
+    <a href="terminos.html">Términos</a>
+    <a href="contacto.html" class="btn-primary mt-4 justify-center"><i class="fa-regular fa-calendar-check"></i> Reservar cita</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero-gradient pt-32 pb-16 lg:pt-40 lg:pb-20 relative">
+    <div class="blob bg-rose-300 w-96 h-96 -top-20 right-1/4"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="text-center max-w-3xl mx-auto" data-anim="fade-up">
+        <span class="text-rose-500 font-semibold text-sm uppercase tracking-wider">Nuestros precios</span>
+        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold mt-3 mb-5 text-gray-900">
+          Calidad <span class="bg-gradient-to-r from-rose-500 to-pink-500 bg-clip-text text-transparent">transparente</span>
+        </h1>
+        <p class="text-lg text-gray-600">Precios justos, sin sorpresas. Elige el tratamiento que más te guste.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAQUETES -->
+  <section class="py-20 lg:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-16" data-anim="fade-up">
+        <span class="text-rose-500 font-semibold text-sm uppercase tracking-wider">Paquetes especiales</span>
+        <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold mt-3 mb-4 text-gray-900">Ahorra con nuestros packs</h2>
+        <p class="text-gray-600">Combina servicios y disfruta de una experiencia completa.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6 lg:gap-8 items-center" id="packages-container"></div>
+    </div>
+  </section>
+
+  <!-- LISTA DE PRECIOS DETALLADA -->
+  <section class="py-20 lg:py-28 bg-rose-50/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-16" data-anim="fade-up">
+        <span class="text-rose-500 font-semibold text-sm uppercase tracking-wider">Tarifas</span>
+        <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold mt-3 mb-4 text-gray-900">Lista completa</h2>
+      </div>
+
+      <div id="pricing-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+
+      <p class="text-center text-xs text-gray-500 mt-10">
+        * Precios orientativos. El precio final puede variar según el diseño, largo o material elegido. Consulta sin compromiso.
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 lg:py-28 bg-white">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12" data-anim="fade-up">
+        <span class="text-rose-500 font-semibold text-sm uppercase tracking-wider">Preguntas frecuentes</span>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold mt-3 mb-3 text-gray-900">Resolvemos tus dudas</h2>
+      </div>
+      <div id="faq-container" class="space-y-4"></div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 hero-gradient">
+    <div class="max-w-4xl mx-auto px-4 text-center" data-anim="zoom-in">
+      <h2 class="font-display text-3xl sm:text-4xl font-bold text-gray-900 mb-5">¿Lista para reservar?</h2>
+      <p class="text-gray-600 mb-8">Elige tu servicio y horario. Te confirmaremos la cita por WhatsApp.</p>
+      <a href="contacto.html" class="btn-primary text-base"><i class="fa-regular fa-calendar-check"></i> Reservar ahora</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-gray-300 pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <div>
+          <div class="flex items-center gap-2 mb-4">
+            <img src="assets/logo.svg" alt="" class="w-10 h-10">
+            <span class="font-display text-xl font-bold text-white">Bella Uñas</span>
+          </div>
+          <p class="text-sm text-gray-400 mb-5">Donde tus manos cuentan tu historia. Salón de manicura profesional desde 2015.</p>
+          <div class="flex gap-3">
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="w-9 h-9 bg-white/5 hover:bg-rose-500 rounded-full flex items-center justify-center transition-colors"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="w-9 h-9 bg-white/5 hover:bg-rose-500 rounded-full flex items-center justify-center transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://tiktok.com" target="_blank" rel="noopener" class="w-9 h-9 bg-white/5 hover:bg-rose-500 rounded-full flex items-center justify-center transition-colors"><i class="fa-brands fa-tiktok"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">Navegación</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="index.html" class="hover:text-rose-400 transition-colors">Inicio</a></li>
+            <li><a href="sobre-nosotros.html" class="hover:text-rose-400 transition-colors">Sobre nosotros</a></li>
+            <li><a href="servicios.html" class="hover:text-rose-400 transition-colors">Servicios</a></li>
+            <li><a href="galeria.html" class="hover:text-rose-400 transition-colors">Galería</a></li>
+            <li><a href="precios.html" class="hover:text-rose-400 transition-colors">Precios</a></li>
+            <li><a href="horario-clases.html" class="hover:text-rose-400 transition-colors">Horario de clases</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">Servicios</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="servicios.html" class="hover:text-rose-400 transition-colors">Manicura</a></li>
+            <li><a href="servicios.html" class="hover:text-rose-400 transition-colors">Pedicura</a></li>
+            <li><a href="servicios.html" class="hover:text-rose-400 transition-colors">Nail Art</a></li>
+            <li><a href="servicios.html" class="hover:text-rose-400 transition-colors">Extensiones</a></li>
+            <li><a href="horario-clases.html" class="hover:text-rose-400 transition-colors">Clases</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">Contacto</h4>
+          <ul class="space-y-3 text-sm">
+            <li class="flex items-start gap-2"><i class="fa-solid fa-location-dot mt-1 text-rose-400"></i><span>Av. de la Belleza 123, 28001 Madrid</span></li>
+            <li class="flex items-start gap-2"><i class="fa-solid fa-phone mt-1 text-rose-400"></i><a href="tel:+34612345678" class="hover:text-rose-400">+34 612 345 678</a></li>
+            <li class="flex items-start gap-2"><i class="fa-solid fa-envelope mt-1 text-rose-400"></i><a href="mailto:hola@bellauñas.es" class="hover:text-rose-400">hola@bellauñas.es</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-white/10 pt-6 flex flex-col sm:flex-row justify-between gap-3 text-xs text-gray-500">
+        <p>© <span id="current-year"></span> Bella Uñas Studio. Todos los derechos reservados.</p>
+        <div class="flex gap-4">
+          <a href="privacidad.html" class="hover:text-rose-400">Política de privacidad</a>
+          <a href="terminos.html" class="hover:text-rose-400">Términos y condiciones</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="scroll-top" aria-label="Volver arriba" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+  <script>
+    const st = document.getElementById('scroll-top');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 600) st.classList.add('show'); else st.classList.remove('show');
+    }, { passive: true });
+  </script>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // Paquetes
+    (function () {
+      const c = document.getElementById('packages-container');
+      if (!c || typeof MOCK === 'undefined') return;
+      c.innerHTML = MOCK.packages.map((p, i) => `
+        <div class="${p.highlight ? 'package-highlight bg-white' : 'bg-white'} rounded-3xl p-8 shadow-md border ${p.highlight ? 'border-rose-500' : 'border-rose-100'} text-center card-hover" data-anim="fade-up" data-delay="${100 + i * 100}">
+          <h3 class="font-display text-2xl font-bold text-gray-800 mb-2">${p.name}</h3>
+          <p class="text-rose-500 text-sm font-semibold uppercase tracking-wider mb-4">Paquete</p>
+          <p class="text-5xl font-display font-bold text-gray-900 mb-1">${p.price}€</p>
+          <p class="text-gray-500 text-sm mb-6">Precio único</p>
+          <ul class="space-y-3 text-left mb-8 text-sm text-gray-700">
+            ${p.features.map(f => `<li class="flex items-start gap-2"><i class="fa-solid fa-check text-rose-500 mt-1"></i><span>${f}</span></li>`).join('')}
+          </ul>
+          <a href="contacto.html?paquete=${encodeURIComponent(p.name)}" class="${p.highlight ? 'btn-primary' : 'btn-secondary'} w-full justify-center">
+            Reservar <i class="fa-solid fa-arrow-right text-xs"></i>
+          </a>
+        </div>
+      `).join('');
+    })();
+
+    // Pricing detallado
+    (function () {
+      const c = document.getElementById('pricing-container');
+      if (!c || typeof MOCK === 'undefined') return;
+      c.innerHTML = MOCK.pricing.map((cat, i) => `
+        <div class="bg-white rounded-2xl shadow-sm border border-rose-100 p-6" data-anim="fade-up" data-delay="${100 + (i % 3) * 100}">
+          <div class="flex items-center gap-3 mb-5 pb-4 border-b border-rose-100">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-rose-400 to-pink-500 text-white flex items-center justify-center">
+              <i class="fa-solid ${cat.category === 'Manicura' ? 'fa-hand-sparkles' : cat.category === 'Pedicura' ? 'fa-spa' : cat.category === 'Uñas Esculpidas' ? 'fa-magic' : cat.category === 'Nail Art' ? 'fa-palette' : 'fa-heart'}"></i>
+            </div>
+            <h3 class="font-display text-xl font-bold text-gray-800">${cat.category}</h3>
+          </div>
+          <ul class="divide-y divide-rose-50">
+            ${cat.items.map(item => `
+              <li class="py-3 flex items-center justify-between gap-3">
+                <div class="flex-grow">
+                  <p class="font-medium text-gray-800 text-sm">${item.name}</p>
+                  <p class="text-xs text-gray-500"><i class="fa-regular fa-clock"></i> ${item.duration}</p>
+                </div>
+                <span class="font-bold text-rose-600 whitespace-nowrap">${item.price}€</span>
+              </li>
+            `).join('')}
+          </ul>
+        </div>
+      `).join('');
+    })();
+
+    // FAQ
+    (function () {
+      const c = document.getElementById('faq-container');
+      if (!c || typeof MOCK === 'undefined') return;
+      c.innerHTML = MOCK.faqs.map((f, i) => `
+        <div data-faq class="bg-white rounded-2xl border border-rose-100 overflow-hidden" data-anim="fade-up" data-delay="${100 + i * 50}">
+          <button data-faq-btn class="p-5 font-semibold text-gray-800 hover:bg-rose-50/50 transition-colors" aria-expanded="false">
+            <span>${f.q}</span>
+            <i class="fa-solid fa-plus text-rose-500"></i>
+          </button>
+          <div data-faq-answer>
+            <p class="px-5 pb-5 text-gray-600 text-sm leading-relaxed">${f.a}</p>
+          </div>
+        </div>
+      `).join('');
+
+      // Reactivar observers y faq logic en elementos inyectados
+      document.querySelectorAll('[data-anim]:not(.anim-in)').forEach(el => {
+        if ('IntersectionObserver' in window) {
+          const obs = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) { entry.target.classList.add('anim-in'); obs.unobserve(entry.target); }
+            });
+          }, { threshold: 0.12 });
+          obs.observe(el);
+        } else { el.classList.add('anim-in'); }
+      });
+      // Inicializar FAQ dinámicamente
+      document.querySelectorAll('[data-faq]').forEach(item => {
+        const btn = item.querySelector('[data-faq-btn]');
+        const ans = item.querySelector('[data-faq-answer]');
+        if (!btn || !ans) return;
+        btn.addEventListener('click', () => {
+          const open = item.classList.toggle('open');
+          btn.setAttribute('aria-expanded', open);
+          ans.style.maxHeight = open ? ans.scrollHeight + 'px' : '0px';
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galería | Bella Uñas Studio</title>
+  <meta name="description" content="Galería de trabajos: manicura, nail art, pedicura, diseños exclusivos. Inspírate con nuestros trabajos.">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter','system-ui','sans-serif'], display: ['"Playfair Display"','serif'] } } } }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+</head>
+<body class="bg-white text-gray-800">
+
+  <!-- NAVBAR -->
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 py-4">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2 group">
+        <img src="assets/logo.svg" alt="Bella Uñas" class="w-10 h-10 group-hover:scale-110 transition-transform">
+        <span class="font-display text-xl font-bold text-gray-800 hidden sm:block">Bella Uñas</span>
+      </a>
+      <ul class="hidden lg:flex items-center gap-7 text-sm font-medium text-gray-700">
+        <li><a href="index.html" data-nav="index.html">Inicio</a></li>
+        <li><a href="sobre-nosotros.html" data-nav="sobre-nosotros.html">Sobre nosotros</a></li>
+        <li><a href="servicios.html" data-nav="servicios.html">Servicios</a></li>
+        <li><a href="galeria.html" data-nav="galeria.html">Galería</a></li>
+        <li><a href="precios.html" data-nav="precios.html">Precios</a></li>
+        <li><a href="horario-clases.html" data-nav="horario-clases.html">Clases</a></li>
+        <li><a href="contacto.html" data-nav="contacto.html">Contacto</a></li>
+      </ul>
+      <a href="contacto.html" class="btn-primary hidden lg:inline-flex"><i class="fa-regular fa-calendar-check"></i> Reservar cita</a>
+      <button id="burger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+    </nav>
+  </header>
+  <div id="mobile-menu-backdrop"></div>
+  <div id="mobile-menu" aria-hidden="true">
+    <a href="index.html">Inicio</a>
+    <a href="sobre-nosotros.html">Sobre nosotros</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="galeria.html">Galería</a>
+    <a href="precios.html">Precios</a>
+    <a href="horario-clases.html">Horario de clases</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="privacidad.html">Privacidad</a>
+    <a href="terminos.html">Términos</a>
+    <a href="contacto.html" class="btn-primary mt-4 justify-center"><i class="fa-regular fa-calendar-check"></i> Reservar cita</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero-gradient pt-32 pb-12 lg:pt-40 lg:pb-16 relative">
+    <div class="blob bg-pink-300 w-96 h-96 top-0 left-1/4"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="text-center max-w-3xl mx-auto" data-anim="fade-up">
+        <span class="text-rose-500 font-semibold text-sm uppercase tracking-wider">Nuestra galería</span>
+        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold mt-3 mb-5 text-gray-900">
+          Trabajos que <span class="bg-gradient-to-r from-rose-500 to-pink-500 bg-clip-text text-transparent">inspiran</span>
+        </h1>
+        <p class="text-lg text-gray-600">Explora algunos de nuestros diseños favoritos. ¿Cuál te gustaría probar?</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FILTROS -->
+  <section class="py-8 bg-white sticky top-16 z-30 border-b border-rose-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div id="gallery-filters" class="flex flex-wrap items-center justify-center gap-2 sm:gap-3" data-anim="fade-up">
+        <button data-filter="Todos"    class="bg-rose-500 text-white px-5 py-2 rounded-full text-sm font-semibold shadow">Todos</button>
+        <button data-filter="Manicura" class="bg-white text-rose-600 border border-rose-200 px-5 py-2 rounded-full text-sm font-semibold hover:bg-rose-50 transition-colors">Manicura</button>
+        <button data-filter="Pedicura" class="bg-white text-rose-600 border border-rose-200 px-5 py-2 rounded-full text-sm font-semibold hover:bg-rose-50 transition-colors">Pedicura</button>
+        <button data-filter="Nail Art" class="bg-white text-rose-600 border border-rose-200 px-5 py-2 rounded-full text-sm font-semibold hover:bg-rose-50 transition-colors">Nail Art</button>
+        <button data-filter="Diseños"  class="bg-white text-rose-600 border border-rose-200 px-5 py-2 rounded-full text-sm font-semibold hover:bg-rose-50 transition-colors">Diseños</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY GRID -->
+  <section class="py-16 lg:py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div id="gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4"></div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox" class="hidden">
+    <button id="lightbox-close" class="lightbox-btn"><i class="fa-solid fa-xmark"></i></button>
+    <button id="lightbox-prev"  class="lightbox-btn"><i class="fa-solid fa-chevron-left"></i></button>
+    <button id="lightbox-next"  class="lightbox-btn"><i class="fa-solid fa-chevron-right"></i></button>
+    <div class="text-center">
+      <img id="lightbox-img" src="" alt="">
+      <p id="lightbox-caption" class="text-white mt-4 text-sm font-medium"></p>
+      <p class="text-white/60 text-xs mt-1"><i class="fa-solid fa-keyboard"></i> Usa ← → para navegar · ESC para cerrar</p>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <section class="py-20 hero-gradient">
+    <div class="max-w-4xl mx-auto px-4 text-center" data-anim="zoom-in">
+      <h2 class="font-display text-3xl sm:text-4xl font-bold text-gray-900 mb-5">¿Te ha inspirado alguno?</h2>
+      <p class="text-gray-600 mb-8">Cuéntanos tu idea favorita o trae tu propia referencia. La hacemos realidad.</p>
+      <a href="contacto.html" class="btn-primary text-base"><i class="fa-regular fa-calendar-check"></i> Reservar cita</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-gray-300 pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <div>
+          <div class="flex items-center gap-2 mb-4">
+            <img src="assets/logo.svg" alt="" class="w-10 h-10">
+            <span class="font-display text-xl font-bold text-white">Bella Uñas</span>
+          </div>
+          <p class="text-sm text-gray-400 mb-5">Donde tus manos cuentan tu historia. Salón de manicura profesional desde 2015.</p>
+          <div class="flex gap-3">
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="w-9 h-9 bg-white/5 hover:bg-rose-500 rounded-full flex items-center justify-center transition-colors"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="w-9 h-9 bg-white/5 hover:bg-rose-500 rounded-full flex items-center justify-center transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://tiktok.com" target="_blank" rel="noopener" class="w-9 h-9 bg-white/5 hover:bg-rose-500 rounded-full flex items-center justify-center transition-colors"><i class="fa-brands fa-tiktok"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">Navegación</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="index.html" class="hover:text-rose-400 transition-colors">Inicio</a></li>
+            <li><a href="sobre-nosotros.html" class="hover:text-rose-400 transition-colors">Sobre nosotros</a></li>
+            <li><a href="servicios.html" class="hover:text-rose-400 transition-colors">Servicios</a></li>
+            <li><a href="galeria.html" class="hover:text-rose-400 transition-colors">Galería</a></li>
+            <li><a href="precios.html" class="hover:text-rose-400 transition-colors">Precios</a></li>
+            <li><a href="horario-clases.html" class="hover:text-rose-400 transition-colors">Horario de clases</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">Servicios</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="servicios.html" class="hover:text-rose-400 transition-colors">Manicura</a></li>
+            <li><a href="servicios.html" class="hover:text-rose-400 transition-colors">Pedicura</a></li>
+            <li><a href="servicios.html" class="hover:text-rose-400 transition-colors">Nail Art</a></li>
+            <li><a href="servicios.html" class="hover:text-rose-400 transition-colors">Extensiones</a></li>
+            <li><a href="horario-clases.html" class="hover:text-rose-400 transition-colors">Clases</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">Contacto</h4>
+          <ul class="space-y-3 text-sm">
+            <li class="flex items-start gap-2"><i class="fa-solid fa-location-dot mt-1 text-rose-400"></i><span>Av. de la Belleza 123, 28001 Madrid</span></li>
+            <li class="flex items-start gap-2"><i class="fa-solid fa-phone mt-1 text-rose-400"></i><a href="tel:+34612345678" class="hover:text-rose-400">+34 612 345 678</a></li>
+            <li class="flex items-start gap-2"><i class="fa-solid fa-envelope mt-1 text-rose-400"></i><a href="mailto:hola@bellauñas.es" class="hover:text-rose-400">hola@bellauñas.es</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-white/10 pt-6 flex flex-col sm:flex-row justify-between gap-3 text-xs text-gray-500">
+        <p>© <span id="current-year"></span> Bella Uñas Studio. Todos los derechos reservados.</p>
+        <div class="flex gap-4">
+          <a href="privacidad.html" class="hover:text-rose-400">Política de privacidad</a>
+          <a href="terminos.html" class="hover:text-rose-400">Términos y condiciones</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="scroll-top" aria-label="Volver arriba" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+  <script>
+    const st = document.getElementById('scroll-top');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 600) st.classList.add('show'); else st.classList.remove('show');
+    }, { passive: true });
+  </script>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/gallery.js"></script>
+</body>
+</html>
