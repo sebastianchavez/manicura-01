@@ -8,15 +8,15 @@ const MOCK = {
   business: {
     name: "Bella Uñas Studio",
     tagline: "Donde tus manos cuentan tu historia",
-    phone: "+34 612 345 678",
-    whatsapp: "34612345678",
-    email: "hola@bellauñas.es",
-    address: "Av. de la Belleza 123, 28001 Madrid",
-    mapsEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3036.7378947283944!2d-3.7037902!3d40.4167754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42287d4c4b5b0b%3A0x5b1e6e9b8e0c0b0a!2sPuerta%20del%20Sol!5e0!3m2!1ses!2ses!4v1700000000000",
+    phone: "+56 9 1234 5678",
+    whatsapp: "56912345678",
+    email: "hola@bellaunas.cl",
+    address: "Av. Providencia 123, Providencia, Santiago, Chile",
+    mapsEmbed: "https://www.openstreetmap.org/export/embed.html?bbox=-70.64%2C-33.44%2C-70.62%2C-33.42&layer=mapnik&marker=-33.4305%2C-70.63",
     instagram: "https://instagram.com",
     facebook: "https://facebook.com",
     tiktok: "https://tiktok.com",
-    whatsappUrl: "https://wa.me/34612345678",
+    whatsappUrl: "https://wa.me/56912345678",
     foundedYear: 2015,
   },
 
@@ -48,7 +48,7 @@ const MOCK = {
       name: "Manicura Clásica",
       description: "Limpieza, limado, cutículas y esmaltado tradicional con tu color favorito.",
       duration: "30 min",
-      fromPrice: 15,
+      fromPrice: 15000,
       featured: true,
     },
     {
@@ -58,7 +58,7 @@ const MOCK = {
       name: "Manicura Gel",
       description: "Esmaltado semipermanente con acabado brillante y duración de hasta 3 semanas.",
       duration: "45 min",
-      fromPrice: 30,
+      fromPrice: 30000,
       featured: true,
     },
     {
@@ -68,7 +68,7 @@ const MOCK = {
       name: "Manicura Rusa",
       description: "Técnica precisa con torno para cutículas perfectas y acabado impecable.",
       duration: "60 min",
-      fromPrice: 40,
+      fromPrice: 40000,
       featured: false,
     },
     {
@@ -78,7 +78,7 @@ const MOCK = {
       name: "Pedicura Spa",
       description: "Exfoliación, masaje relajante, hidratación profunda y esmaltado.",
       duration: "60 min",
-      fromPrice: 35,
+      fromPrice: 35000,
       featured: true,
     },
     {
@@ -88,7 +88,7 @@ const MOCK = {
       name: "Pedicura con Gel",
       description: "Pedicura completa con esmaltado semipermanente para pies perfectos.",
       duration: "75 min",
-      fromPrice: 45,
+      fromPrice: 45000,
       featured: false,
     },
     {
@@ -98,7 +98,7 @@ const MOCK = {
       name: "Nail Art Personalizado",
       description: "Diseños únicos a mano alzada: flores, geometría, minimalismo y mucho más.",
       duration: "60 min",
-      fromPrice: 50,
+      fromPrice: 50000,
       featured: true,
     },
     {
@@ -108,7 +108,7 @@ const MOCK = {
       name: "Extensiones Acrílicas",
       description: "Uñas largas, resistentes y moldeadas a tu estilo con técnica profesional.",
       duration: "120 min",
-      fromPrice: 70,
+      fromPrice: 70000,
       featured: false,
     },
     {
@@ -118,7 +118,7 @@ const MOCK = {
       name: "Extensiones Soft Gel",
       description: "Extensiones naturales y flexibles con tips de gel, ideales para el día a día.",
       duration: "90 min",
-      fromPrice: 65,
+      fromPrice: 65000,
       featured: false,
     },
     {
@@ -128,7 +128,7 @@ const MOCK = {
       name: "Tratamiento Reparador",
       description: "Hidratación profunda con keratina y aceite de argán para uñas dañadas.",
       duration: "30 min",
-      fromPrice: 20,
+      fromPrice: 20000,
       featured: false,
     },
     {
@@ -138,7 +138,7 @@ const MOCK = {
       name: "Diseño Floral 3D",
       description: "Decoración en relieve con efecto tridimensional y detalles únicos.",
       duration: "75 min",
-      fromPrice: 60,
+      fromPrice: 60000,
       featured: false,
     },
   ],
@@ -208,49 +208,49 @@ const MOCK = {
     {
       category: "Manicura",
       items: [
-        { name: "Manicura Clásica",            price: 15,  duration: "30 min" },
-        { name: "Manicura con Esmaltado Gel",  price: 30,  duration: "45 min" },
-        { name: "Manicura Rusa",               price: 40,  duration: "60 min" },
-        { name: "Manicura Express",            price: 12,  duration: "20 min" },
-        { name: "Cambio de Esmalte",           price: 8,   duration: "15 min" },
+        { name: "Manicura Clásica",            price: 15000,  duration: "30 min" },
+        { name: "Manicura con Esmaltado Gel",  price: 30000,  duration: "45 min" },
+        { name: "Manicura Rusa",               price: 40000,  duration: "60 min" },
+        { name: "Manicura Express",            price: 12000,  duration: "20 min" },
+        { name: "Cambio de Esmalte",           price: 8000,   duration: "15 min" },
       ],
     },
     {
       category: "Pedicura",
       items: [
-        { name: "Pedicura Clásica",            price: 25,  duration: "45 min" },
-        { name: "Pedicura Spa Completa",       price: 35,  duration: "60 min" },
-        { name: "Pedicura con Gel",            price: 45,  duration: "75 min" },
-        { name: "Tratamiento Pies Agrietados", price: 20,  duration: "30 min" },
+        { name: "Pedicura Clásica",            price: 25000,  duration: "45 min" },
+        { name: "Pedicura Spa Completa",       price: 35000,  duration: "60 min" },
+        { name: "Pedicura con Gel",            price: 45000,  duration: "75 min" },
+        { name: "Tratamiento Pies Agrietados", price: 20000,  duration: "30 min" },
       ],
     },
     {
       category: "Uñas Esculpidas",
       items: [
-        { name: "Extensiones Acrílicas",       price: 70,  duration: "120 min" },
-        { name: "Extensiones Soft Gel",        price: 65,  duration: "90 min" },
-        { name: "Relleno Acrílico",            price: 45,  duration: "75 min" },
-        { name: "Relleno Soft Gel",            price: 40,  duration: "60 min" },
-        { name: "Retirada de Uñas",            price: 15,  duration: "30 min" },
+        { name: "Extensiones Acrílicas",       price: 70000,  duration: "120 min" },
+        { name: "Extensiones Soft Gel",        price: 65000,  duration: "90 min" },
+        { name: "Relleno Acrílico",            price: 45000,  duration: "75 min" },
+        { name: "Relleno Soft Gel",            price: 40000,  duration: "60 min" },
+        { name: "Retirada de Uñas",            price: 15000,  duration: "30 min" },
       ],
     },
     {
       category: "Nail Art",
       items: [
-        { name: "Diseño por Uña",              price: 5,   duration: "+15 min" },
-        { name: "Nail Art Personalizado",      price: 50,  duration: "60 min" },
-        { name: "Diseño Floral 3D",            price: 60,  duration: "75 min" },
-        { name: "Efecto Ombré",                price: 25,  duration: "+30 min" },
-        { name: "Aplicación de Strass",        price: 15,  duration: "+20 min" },
+        { name: "Diseño por Uña",              price: 5000,   duration: "+15 min" },
+        { name: "Nail Art Personalizado",      price: 50000,  duration: "60 min" },
+        { name: "Diseño Floral 3D",            price: 60000,  duration: "75 min" },
+        { name: "Efecto Ombré",                price: 25000,  duration: "+30 min" },
+        { name: "Aplicación de Strass",        price: 15000,  duration: "+20 min" },
       ],
     },
     {
       category: "Tratamientos",
       items: [
-        { name: "Tratamiento Reparador Keratina", price: 20, duration: "30 min" },
-        { name: "Hidratación Profunda",           price: 18, duration: "25 min" },
-        { name: "Parafina de Manos",              price: 22, duration: "30 min" },
-        { name: "Exfoliación de Manos",           price: 15, duration: "20 min" },
+        { name: "Tratamiento Reparador Keratina", price: 20000, duration: "30 min" },
+        { name: "Hidratación Profunda",           price: 18000, duration: "25 min" },
+        { name: "Parafina de Manos",              price: 22000, duration: "30 min" },
+        { name: "Exfoliación de Manos",           price: 15000, duration: "20 min" },
       ],
     },
   ],
@@ -259,7 +259,7 @@ const MOCK = {
   packages: [
     {
       name: "Básico",
-      price: 25,
+      price: 25000,
       highlight: false,
       features: [
         "Manicura Clásica",
@@ -269,7 +269,7 @@ const MOCK = {
     },
     {
       name: "Premium",
-      price: 55,
+      price: 55000,
       highlight: true,
       features: [
         "Manicura Rusa",
@@ -280,7 +280,7 @@ const MOCK = {
     },
     {
       name: "VIP",
-      price: 95,
+      price: 95000,
       highlight: false,
       features: [
         "Manicura Rusa",
@@ -300,7 +300,7 @@ const MOCK = {
       level: "Principiante",
       duration: "4 semanas",
       hoursWeek: "2 horas / semana",
-      price: 120,
+      price: 120000,
       description: "Aprende la técnica del esmaltado semipermanente desde cero. Incluye kit básico.",
       includes: ["Kit de inicio", "Manual didáctico", "Práctica en modelos", "Certificado"],
       icon: "fa-graduation-cap",
@@ -311,7 +311,7 @@ const MOCK = {
       level: "Intermedio",
       duration: "6 semanas",
       hoursWeek: "3 horas / semana",
-      price: 180,
+      price: 180000,
       description: "Domina pinceladas, decoración 3D, foil, encapsulado y técnicas avanzadas.",
       includes: ["Kit completo de pinceles", "Materiales", "Práctica intensiva", "Certificado"],
       icon: "fa-palette",
@@ -322,7 +322,7 @@ const MOCK = {
       level: "Avanzado",
       duration: "8 semanas",
       hoursWeek: "4 horas / semana",
-      price: 280,
+      price: 280000,
       description: "Formación profesional completa en acrílico, limado y mantenimiento.",
       includes: ["Kit profesional", "Modelos reales", "Práctica supervisada", "Certificado oficial"],
       icon: "fa-magic-wand-sparkles",
@@ -333,7 +333,7 @@ const MOCK = {
       level: "Principiante",
       duration: "1 sesión",
       hoursWeek: "2 horas (sábado)",
-      price: 45,
+      price: 45000,
       description: "Aprende a hacerte la manicura perfecta en casa con trucos profesionales.",
       includes: ["Materiales incluidos", "Guía personalizada", "Descuento en productos"],
       icon: "fa-hand-sparkles",
@@ -365,10 +365,10 @@ const MOCK = {
   faqs: [
     { q: "¿Cuánto dura una cita?",           a: "Depende del servicio: entre 30 minutos (manicura básica) y 2 horas (extensiones acrílicas). Te informaremos al reservar." },
     { q: "¿Necesito pedir cita previa?",     a: "Sí, trabajamos con cita previa para garantizarte una atención personalizada y sin esperas. Puedes reservar online o por WhatsApp." },
-    { q: "¿Qué métodos de pago aceptáis?",   a: "Efectivo, tarjeta de crédito/débito, Bizum y Apple Pay / Google Pay." },
+    { q: "¿Qué métodos de pago aceptan?",   a: "Efectivo, tarjeta de crédito/débito, transferencia bancaria y Apple Pay / Google Pay." },
     { q: "¿Los productos son aptos para alérgicas?", a: "Trabajamos con marcas libres de tóxicos (5-free, 7-free). Si tienes alergias específicas, indícanoslo al reservar." },
     { q: "¿Puedo llevar mi propio diseño?",   a: "¡Por supuesto! Si tienes una foto o idea, la adaptamos a tus manos. También te asesoramos si no tienes claro qué quieres." },
-    { q: "¿Ofrecéis servicio a domicilio?",   a: "Sí, bajo disponibilidad y con un suplemento según la zona. Consúltanos por WhatsApp." },
+    { q: "¿Ofrecen servicio a domicilio?",   a: "Sí, bajo disponibilidad y con un suplemento según la zona. Consúltanos por WhatsApp." },
   ],
 
   // ------- Categorías galería -------
@@ -376,3 +376,8 @@ const MOCK = {
 };
 
 if (typeof window !== "undefined") window.MOCK = MOCK;
+
+// Valores de ejemplo en pesos chilenos, sin decimales.
+const formatPrice = (value) => new Intl.NumberFormat("es-CL", {
+  style: "currency", currency: "CLP", maximumFractionDigits: 0,
+}).format(value);

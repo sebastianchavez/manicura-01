@@ -25,19 +25,37 @@
   const burger = document.getElementById("burger");
   const mobileMenu = document.getElementById("mobile-menu");
   if (burger && mobileMenu) {
-    burger.addEventListener("click", () => {
-      const isOpen = mobileMenu.classList.toggle("open");
+    const backdrop = document.getElementById("mobile-menu-backdrop");
+    const setMenuOpen = (isOpen) => {
+      mobileMenu.classList.toggle("open", isOpen);
+      mobileMenu.setAttribute("aria-hidden", String(!isOpen));
+      mobileMenu.inert = !isOpen;
       burger.classList.toggle("open", isOpen);
-      burger.setAttribute("aria-expanded", isOpen);
+      burger.setAttribute("aria-expanded", String(isOpen));
+      burger.setAttribute("aria-label", isOpen ? "Cerrar menú" : "Abrir menú");
+      backdrop?.classList.toggle("show", isOpen);
+      navbar?.classList.toggle("menu-open", isOpen);
       document.body.classList.toggle("overflow-hidden", isOpen);
+    };
+    setMenuOpen(false);
+    burger.setAttribute("aria-controls", "mobile-menu");
+    burger.addEventListener("click", () => {
+      setMenuOpen(!mobileMenu.classList.contains("open"));
+    });
+    backdrop?.addEventListener("click", () => setMenuOpen(false));
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && mobileMenu.classList.contains("open")) {
+        setMenuOpen(false);
+        burger.focus();
+      }
+    });
+    window.matchMedia("(min-width: 1024px)").addEventListener("change", (event) => {
+      if (event.matches) setMenuOpen(false);
     });
     // Cerrar al pulsar un enlace
     mobileMenu.querySelectorAll("a").forEach((a) =>
       a.addEventListener("click", () => {
-        mobileMenu.classList.remove("open");
-        burger.classList.remove("open");
-        burger.setAttribute("aria-expanded", false);
-        document.body.classList.remove("overflow-hidden");
+        setMenuOpen(false);
       })
     );
   }
@@ -80,9 +98,9 @@
           const animate = (now) => {
             const t = Math.min((now - start) / duration, 1);
             const eased = 1 - Math.pow(1 - t, 3);
-            el.textContent = Math.floor(target * eased).toLocaleString("es-ES") + suffix;
+            el.textContent = Math.floor(target * eased).toLocaleString("es-CL") + suffix;
             if (t < 1) requestAnimationFrame(animate);
-            else el.textContent = target.toLocaleString("es-ES") + suffix;
+            else el.textContent = target.toLocaleString("es-CL") + suffix;
           };
           requestAnimationFrame(animate);
           counterObs.unobserve(el);

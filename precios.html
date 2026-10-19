@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-CL">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -62,7 +62,7 @@
         <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold mt-3 mb-5 text-gray-900">
           Calidad <span class="bg-gradient-to-r from-rose-500 to-pink-500 bg-clip-text text-transparent">transparente</span>
         </h1>
-        <p class="text-lg text-gray-600">Precios justos, sin sorpresas. Elige el tratamiento que más te guste.</p>
+        <p class="text-lg text-gray-600">Valores en pesos chilenos (CLP), sin sorpresas. Elige el tratamiento que más te guste.</p>
       </div>
     </div>
   </section>
@@ -156,9 +156,9 @@
         <div>
           <h4 class="text-white font-semibold mb-4">Contacto</h4>
           <ul class="space-y-3 text-sm">
-            <li class="flex items-start gap-2"><i class="fa-solid fa-location-dot mt-1 text-rose-400"></i><span>Av. de la Belleza 123, 28001 Madrid</span></li>
-            <li class="flex items-start gap-2"><i class="fa-solid fa-phone mt-1 text-rose-400"></i><a href="tel:+34612345678" class="hover:text-rose-400">+34 612 345 678</a></li>
-            <li class="flex items-start gap-2"><i class="fa-solid fa-envelope mt-1 text-rose-400"></i><a href="mailto:hola@bellauñas.es" class="hover:text-rose-400">hola@bellauñas.es</a></li>
+            <li class="flex items-start gap-2"><i class="fa-solid fa-location-dot mt-1 text-rose-400"></i><span>Av. Providencia 123, Providencia, Santiago, Chile</span></li>
+            <li class="flex items-start gap-2"><i class="fa-solid fa-phone mt-1 text-rose-400"></i><a href="tel:+56912345678" class="hover:text-rose-400">+56 9 1234 5678</a></li>
+            <li class="flex items-start gap-2"><i class="fa-solid fa-envelope mt-1 text-rose-400"></i><a href="mailto:hola@bellaunas.cl" class="hover:text-rose-400">hola@bellaunas.cl</a></li>
           </ul>
         </div>
       </div>
@@ -193,7 +193,7 @@
         <div class="${p.highlight ? 'package-highlight bg-white' : 'bg-white'} rounded-3xl p-8 shadow-md border ${p.highlight ? 'border-rose-500' : 'border-rose-100'} text-center card-hover" data-anim="fade-up" data-delay="${100 + i * 100}">
           <h3 class="font-display text-2xl font-bold text-gray-800 mb-2">${p.name}</h3>
           <p class="text-rose-500 text-sm font-semibold uppercase tracking-wider mb-4">Paquete</p>
-          <p class="text-5xl font-display font-bold text-gray-900 mb-1">${p.price}€</p>
+          <p class="text-4xl xl:text-5xl font-display font-bold text-gray-900 mb-1">${formatPrice(p.price)}</p>
           <p class="text-gray-500 text-sm mb-6">Precio único</p>
           <ul class="space-y-3 text-left mb-8 text-sm text-gray-700">
             ${p.features.map(f => `<li class="flex items-start gap-2"><i class="fa-solid fa-check text-rose-500 mt-1"></i><span>${f}</span></li>`).join('')}
@@ -224,7 +224,7 @@
                   <p class="font-medium text-gray-800 text-sm">${item.name}</p>
                   <p class="text-xs text-gray-500"><i class="fa-regular fa-clock"></i> ${item.duration}</p>
                 </div>
-                <span class="font-bold text-rose-600 whitespace-nowrap">${item.price}€</span>
+                <span class="font-bold text-rose-600 whitespace-nowrap">${formatPrice(item.price)}</span>
               </li>
             `).join('')}
           </ul>

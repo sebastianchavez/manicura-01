@@ -78,13 +78,13 @@ Ejemplo:
 const MOCK = {
   business: {
     name: "Tu Salón",
-    phone: "+34 600 000 000",
-    email: "info@tusalon.com",
-    address: "Calle Mayor 1, Madrid",
+    phone: "+56 9 1234 5678",
+    email: "info@tusalon.cl",
+    address: "Av. Providencia 123, Santiago, Chile",
     // ...
   },
   services: [
-    { name: "Manicura Básica", price: 15, /* ... */ }
+    { name: "Manicura Básica", price: 15000, /* ... */ }
   ]
   // ...
 };
@@ -155,3 +155,7 @@ Template de demostración. Imágenes vía Unsplash (uso libre). Font Awesome via
 ---
 
 **Hecho con** ❤️ **y mucho brillo** ✨
+
+### Localización chilena
+
+Precios de ejemplo en CLP; `formatPrice()` aplica el formato `es-CL` sin decimales. Los datos de contacto son ficticios: reemplaza el teléfono, WhatsApp, correo, dirección y ubicación del mapa por los del negocio antes de publicar. Los contactos también aparecen en los HTML.
